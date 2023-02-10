@@ -6,17 +6,10 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
+      value: 5a5551075d01590d085b097045770d48444f4e722f7075357e791f36b3b1653a
       flags: 0
     RecentlyUsedSceneGuid-1:
-<<<<<<< HEAD:Main2DProjekt/UserSettings/EditorUserSettings.asset
-      value: 060305515756510a0b575a724477594412154b7c7d7b2764747b1c67b5b1633c
-=======
       value: 510703055d00515a5c5e082440210844424e4b7e2e7f7e69297a4961e3e43160
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 02045505060d0f0a0b5d5427157709134e161c2b7b2d20612c7c4b64b5b4306a
->>>>>>> main:New2DGame/UserSettings/EditorUserSettings.asset
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
