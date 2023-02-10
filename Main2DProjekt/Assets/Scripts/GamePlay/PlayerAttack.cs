@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject sword;
-    public bool swordAttackReady;
+    public bool swordAttackReady = true;
 
     public float swordAttackDeley = 0.5f;
     void Start()
@@ -20,9 +20,10 @@ public class PlayerAttack : MonoBehaviour
     //Attack with the gameobjekt "Sword"
     void UseSwordAttack()
     {
-        // if Space is presed when swordAttackReady is true, activete the sword gameobjekt and start "SwordAttack"
+        // if K is presed when swordAttackReady is true, create the sword gameobjekt and start "SwordAttack"
         if (Input.GetKeyDown(KeyCode.K) && swordAttackReady)
         {
+
             sword.SetActive(true);
             StartCoroutine(SwordAttack());
         }
