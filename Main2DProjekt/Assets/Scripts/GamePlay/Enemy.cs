@@ -45,20 +45,19 @@ public class Enemy : MonoBehaviour
         }
 
     }
+    //Movinge to player on X
     void EnemyMoveToPlayer()
     {
-        //avstånd mellan enemy och player
+        //Disdance form player and enemy
         playerEnemyXDistance = Mathf.Abs(Player.transform.position.x - gameObject.transform.position.x);
-
-        // Då avståndet är störe en och enemyStop inte är sant så rör sig enemy spelare
+        //Cheking distance and enemyStop bool
         if (playerEnemyXDistance < 5 && enemyStop)
         {
             //Stop
         }
         else
         {
-            //Vector to the player x position
-            moveToPlayer = new Vector2(Player.transform.position.x - gameObject.transform.position.x, 0).normalized;
+            moveToPlayer = new Vector2(Player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
             transform.Translate(Time.deltaTime * moveToPlayer);
         }
     }
