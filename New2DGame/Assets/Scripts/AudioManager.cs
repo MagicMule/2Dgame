@@ -7,7 +7,10 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
-    public AudioMixer audioMixer;
+    [SerializeField] AudioMixer mixer;
+
+    public const string MUSIC_KEY = "MusicVolume";
+    public const string SFX_KEY = "SFXVolume";
 
 
     void Awake ()
@@ -29,8 +32,9 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
-           // s.source.outputAudioMixerGroup = s.outputAudioMixerGroup;
+            
         }
+        LoadVolume();
     }
 
     void Start ()
@@ -48,5 +52,14 @@ public class AudioManager : MonoBehaviour
         }
             
         s.source.Play();
+    }
+
+    void LoadVolume() //Volume saved in VolumeSettings.cs
+    {
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+
+        mixer.SetFloat(VolumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) * 20);
+        mixer.SetFloat(VolumeSettings.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
     }
 }
