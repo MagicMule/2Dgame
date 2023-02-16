@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
+    public AudioMixerGroup audioMixer;
     [SerializeField] AudioMixer mixer;
 
     public const string MUSIC_KEY = "MusicVolume";
@@ -32,7 +33,9 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
-            
+
+            s.source.outputAudioMixerGroup = audioMixer;
+
         }
         LoadVolume();
     }
