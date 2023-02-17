@@ -1,7 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
 
-// The Sound class saves some constans realted to playing sound, name, clip, volume, pitch, loop, surce
+// The Sound class saves some constans realted to playing sound, name, clip, volume, pitch, loop and surce
 [System.Serializable]
 public class Sound 
 {
