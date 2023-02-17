@@ -15,8 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //Calculte player horizontal movment
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         
+        
+        //player Jump, from CharaterController
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -24,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //get left-right movment, from CharaterController
         controller2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+        jump = false; //Set Jump false, stop "dubble jumping"
     }
 }
