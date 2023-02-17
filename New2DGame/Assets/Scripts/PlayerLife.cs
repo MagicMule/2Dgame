@@ -10,7 +10,7 @@ public class PlayerLife : MonoBehaviour
 
     public float startingHealth;
     public float health { get; protected set; }
-    protected bool dead;
+    protected bool dead; // checking player death status
 
     public event System.Action OnDeath;
 
