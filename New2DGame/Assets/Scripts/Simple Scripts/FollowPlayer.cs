@@ -9,15 +9,20 @@ public class FollowPlayer : MonoBehaviour
     /// Following the gameobjekt player, used for camra control
     /// </summary>
     public GameObject playerGO;
+    public float offsetY = 0;
+    public float offsetX = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3 (playerGO.transform.position.x, transform.position.y, transform.position.z);
+        FollowThePlayer();
+    }
+    void FollowThePlayer()
+    {
+        transform.position = new Vector3(playerGO.transform.position.x - offsetX, transform.position.y - offsetY, transform.position.z);
     }
 }
