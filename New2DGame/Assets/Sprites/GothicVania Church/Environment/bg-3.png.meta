@@ -113,18 +113,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2199,10 +2187,10 @@ TextureImporter:
       bg-3_45: -620939965
       bg-3_58: -244363285
       bg-3_24: -2031549980
-      bg-3_47: -1927623366
-      bg-3_89: 633778699
-      bg-3_28: 398526302
       bg-3_42: 25889927
+      bg-3_47: -1927623366
+      bg-3_28: 398526302
+      bg-3_89: 633778699
       bg-3_60: 1500779090
       bg-3_33: -1928762423
       bg-3_37: -512982962
@@ -2230,9 +2218,9 @@ TextureImporter:
       bg-3_40: 639129468
       bg-3_23: -1201112144
       bg-3_38: -534556327
-      bg-3_92: -312810371
-      bg-3_77: 1182180339
       bg-3_82: 106432923
+      bg-3_77: 1182180339
+      bg-3_92: -312810371
       bg-3_13: 503021711
       bg-3_52: -548268832
       bg-3_12: -1789271341
