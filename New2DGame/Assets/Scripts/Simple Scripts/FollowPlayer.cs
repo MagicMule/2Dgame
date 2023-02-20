@@ -23,6 +23,7 @@ public class FollowPlayer : MonoBehaviour
     }
     void FollowThePlayer()
     {
-        transform.position = new Vector3(playerGO.transform.position.x - offsetX, transform.position.y - offsetY, transform.position.z);
+        // Allwas Follow Player x position, and y pos is freely changablie
+        transform.position = new Vector3(playerGO.transform.position.x - offsetX, offsetY, transform.position.z);
     }
 }
