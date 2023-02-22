@@ -6,7 +6,7 @@ public class TriggerEventMoveCamra : MonoBehaviour
 {
     // The camria with the followplayer script
     public FollowPlayer followPlayerScript;
-
+    public int nivå;
     private void Start()
     {
 
@@ -14,9 +14,10 @@ public class TriggerEventMoveCamra : MonoBehaviour
     // Cange camera focus
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")) 
         {
-            followPlayerScript.cameraFocus = 2;
+            followPlayerScript.cameraFocus = nivå; // The type of camra controll, from "FollowPLayer" script
+            followPlayerScript.UpdateY(); // reset y pos when coliton
         }
     }
 }

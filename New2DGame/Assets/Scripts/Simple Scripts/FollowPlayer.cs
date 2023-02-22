@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour
     /// Following the gameobjekt player, used for camra control
     /// </summary>
     public GameObject playerGO;
-    public float offsetY = 0;
+    public float offsetY;
     public float offsetX = 0;
 
     public bool FollowOnX = true;
@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
-
+        offsetY = playerGO.transform.position.y;
     }
 
     void Update()
@@ -45,12 +45,17 @@ public class FollowPlayer : MonoBehaviour
     // Camara follow Player On X
     void FollowThePlayerOnX()
     {
-        // Allwas Follow Player x position, and y pos is freely changablie
+        // When the Camra canges back to playerOnX, cange the y value to follow the playerGO
+        
         transform.position = new Vector3(playerGO.transform.position.x - offsetX, offsetY, transform.position.z);
     }
     // Camara Follows Player On X and Y
     void FollowThePlayerOnXAndY()
     {
         transform.position = new Vector3(playerGO.transform.position.x, playerGO.transform.position.y, transform.position.z);
+    }
+    public void UpdateY()
+    {
+        offsetY = playerGO.transform.position.y;
     }
 }
