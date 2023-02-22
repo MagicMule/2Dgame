@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class TriggerEventMoveCamra : MonoBehaviour
 {
+    // The camria with the followplayer script
     public FollowPlayer followPlayerScript;
 
     private void Start()
     {
-        
+
     }
+    // Cange camera focus
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            followPlayerScript.offsetY = collision.transform.position.y; // ändra bara en gång nu...
+            followPlayerScript.cameraFocus = 2;
         }
     }
 }
