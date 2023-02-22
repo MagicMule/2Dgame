@@ -17,8 +17,8 @@ TagManager:
   - Back1
   - Back2
   - Back3
-  - 
-  - 
+  - Player
+  - Diff Layer
   - 
   - 
   - 
@@ -42,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Diff Layer
+    uniqueID: 2932363449
     locked: 0

@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 411161263835551253, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 411161263835551253, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_IsActive
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015142295338024675, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1015142296013199221, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_GravityScale
@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015142296013199228, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1015142296013199231, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_Size.x
@@ -248,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1015142297064959181, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e914952771c2bb4a82256ac2b8dc394, type: 3}
@@ -18371,6 +18371,9 @@ MonoBehaviour:
   playerGO: {fileID: 1803972154}
   offsetY: 1
   offsetX: 0
+  FollowOnX: 1
+  FollowOnXAndY: 0
+  cameraFocus: 1
 --- !u!1 &1708474624
 GameObject:
   m_ObjectHideFlags: 0
@@ -18562,7 +18565,7 @@ GameObject:
   - component: {fileID: 1835792313}
   - component: {fileID: 1835792312}
   - component: {fileID: 1835792315}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18655,7 +18658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835792311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 0.82, z: 0}
+  m_LocalPosition: {x: 0.21, y: 1.04, z: 0}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
