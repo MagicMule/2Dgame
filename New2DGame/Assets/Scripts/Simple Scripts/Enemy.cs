@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float enemySpeed = 5;
     private Vector3 moveToPlayer;
 
+    public bool IsFlying = false;
     public bool enemyStop = false;
     private float playerEnemyXDistance;
 

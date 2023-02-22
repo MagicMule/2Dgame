@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TriggerEeventActivateEnemy : MonoBehaviour
 {
-    public Enemy enemy;
-
+    //public Enemy enemy;
+    public List<Enemy> enemies;
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -14,4 +15,14 @@ public class TriggerEeventActivateEnemy : MonoBehaviour
             enemy.gameObject.GetComponentInChildren<Enemy>().enabled = true;
         }        
     }
+    */
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        foreach (Enemy enemy in enemies)
+        {
+            Debug.Log("EventEnemyActivate");
+            enemy.gameObject.GetComponentInChildren<Enemy>().enabled = true;
+        }
+    }
+
 }
