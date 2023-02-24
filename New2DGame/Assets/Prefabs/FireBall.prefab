@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4098883642888087172}
   - component: {fileID: 4098883642888087195}
   - component: {fileID: 2075973233}
+  - component: {fileID: 5308750773024539058}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -97,6 +98,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19edbbd960e84547bd49a244a14d36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  player: {fileID: 0}
   missileSpeed: 1
   targetPos: {x: 0, y: 0, z: 0}
+--- !u!58 &5308750773024539058
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098883642888087194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

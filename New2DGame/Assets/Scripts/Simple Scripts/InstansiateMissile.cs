@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class InstansiateMissile : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class InstansiateMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(InstansiatMissile), 1, 1);
+        InvokeRepeating(nameof(InstansiatMissilePrefab), 1, 2);
     }
 
     // Update is called once per frame
@@ -16,8 +17,8 @@ public class InstansiateMissile : MonoBehaviour
     {
         
     }
-    void InstansiatMissile()
+    void InstansiatMissilePrefab()
     {
-        Instantiate(missilePrefab);
+        Instantiate(missilePrefab, transform.position, transform.rotation); // instansiat at perent; The enemy that shots missile
     }
 }

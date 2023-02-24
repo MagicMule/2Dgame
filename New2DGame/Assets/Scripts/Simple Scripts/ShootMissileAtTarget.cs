@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ShootMissileAtTarget : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject player;
     public float missileSpeed = 1f;
     public Vector3 targetPos;
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,8 +19,16 @@ public class ShootMissileAtTarget : MonoBehaviour
     }
     Vector3 GetTargetPos()
     {
-        targetPos = (target.transform.position - transform.position).normalized;
+        targetPos = (player.transform.position - transform.position).normalized;
         return targetPos;
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player Hit!");
+            Destroy(gameObject);
+        }
     }
 }

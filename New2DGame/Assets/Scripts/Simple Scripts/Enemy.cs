@@ -6,19 +6,25 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
     public GameObject Player;
+
     public float pushDistanse = 10f;
     public int enemyHealth = 10;
     public float enemySpeed = 5;
+
     private Vector3 moveToPlayer;
 
+    public bool isShoter = false;
     public bool IsFlying = false;
     public bool enemyStop = false;
+
     private float playerEnemyXDistance;
+    public float playerEnemyXDistanceMax = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
+        EnemyMissileAttack();
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Players sword colliton with enemy
         if (collision.gameObject.CompareTag("Sword"))
         {
             Debug.Log("Player hit: " + gameObject.name);
@@ -46,13 +53,15 @@ public class Enemy : MonoBehaviour
         }
 
     }
+
     //Movinge to player on X
     void EnemyMoveToPlayer()
     {
-        //Disdance form player and enemy
+        //Disdance form player and enemy on the X axes
         playerEnemyXDistance = Mathf.Abs(Player.transform.position.x - gameObject.transform.position.x);
+
         //Cheking distance and enemyStop bool
-        if (playerEnemyXDistance < 5 && enemyStop)
+        if (playerEnemyXDistance < playerEnemyXDistanceMax && enemyStop)
         {
             //Stop
         }
@@ -60,6 +69,14 @@ public class Enemy : MonoBehaviour
         {
             moveToPlayer = new Vector2(Player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
             transform.Translate(Time.deltaTime * moveToPlayer);
+        }
+    }
+    //cheks if enemy is to shot a missile
+    void EnemyMissileAttack()
+    {
+        if (isShoter)
+        {
+            GetComponentInChildren<InstansiateMissile>().enabled = true;
         }
     }
 
