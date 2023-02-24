@@ -19,6 +19,7 @@ public class TriggerEeventActivateEnemy : MonoBehaviour
             }
 
         }
+        Destroy(gameObject);
 
     }
 
