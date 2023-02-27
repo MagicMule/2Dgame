@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
     public GameObject Player;
+    private GameManagerSS gameManager;
 
     public float pushDistanse = 10f;
     public int enemyHealth = 10;
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         enemyRb = GetComponent<Rigidbody2D>();
         EnemyMissileAttack();
+        gameManager = GetComponent<GameManagerSS>();
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class Enemy : MonoBehaviour
         }
         if (enemyHealth <= 0)
         {
+            gameManager.UpdateScoreUI(); //Uppdate score for defeated enemy
             Debug.Log("Enemy destroyed: " + gameObject.name);
             Destroy(gameObject);
         }
