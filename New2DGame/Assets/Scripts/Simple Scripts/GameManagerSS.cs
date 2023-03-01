@@ -20,16 +20,20 @@ public class GameManagerSS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            UpdateScoreUI();
+        }
     }
     public void UpdateScoreUI()
     {
-        score += 1;
+        score = score + 1;
         scoreText.text = "Score: " + score;
     }
     public void UpdatePlayerHPUI()
     {
-        playerHP -= 1;
+        playerHP = playerHP - 1;
         playerHPText.text = "HP: " + playerHP;
+        Debug.Log(playerHP);
     }
 }

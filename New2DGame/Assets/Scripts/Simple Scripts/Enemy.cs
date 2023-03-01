@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
     public GameObject Player;
-    private GameManagerSS gameManager;
+    public GameManagerSS gameManagerScript;
 
     public float pushDistanse = 10f;
     public int enemyHealth = 10;
@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour
     {
         enemyRb = GetComponent<Rigidbody2D>();
         EnemyMissileAttack();
-        gameManager = GetComponent<GameManagerSS>();
     }
 
     // Update is called once per frame
@@ -36,22 +35,22 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //When enemy hit by sword
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         // Players sword colliton with enemy
         if (collision.gameObject.CompareTag("Sword"))
         {
-            Debug.Log("Player hit: " + gameObject.name);
+            Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
             enemyHealth -= 1;
-            Debug.Log("Enemy Health left: " + enemyHealth);
             // Push enemy up and away from attack
             enemyRb.AddForce(new Vector2((gameObject.transform.position.x - Player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
 
         }
         if (enemyHealth <= 0)
         {
-            gameManager.UpdateScoreUI(); //Uppdate score for defeated enemy
             Debug.Log("Enemy destroyed: " + gameObject.name);
+            gameManagerScript.UpdateScoreUI(); //Update Score
             Destroy(gameObject);
         }
 
