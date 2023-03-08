@@ -4,29 +4,20 @@ using UnityEngine;
 
 public class ObjektOnMovePlatform : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Objekt on colliton will follow this gameobjekt
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject)
         {
-            collision.gameObject.transform.parent = transform;
+            collision.gameObject.transform.parent = transform; // set coliding objekt to follow platfrom
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject)
         {
-            collision.gameObject.transform.parent = null;
+            collision.gameObject.transform.parent = null; // set exseting objekt to return to orignal transform parent
         }
     }
 }

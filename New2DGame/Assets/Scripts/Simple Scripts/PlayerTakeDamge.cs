@@ -25,6 +25,7 @@ public class PlayerTakeDamge : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
+
         }             
     }
 }

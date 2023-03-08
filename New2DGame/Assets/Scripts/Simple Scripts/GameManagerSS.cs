@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManagerSS : MonoBehaviour
@@ -23,6 +24,11 @@ public class GameManagerSS : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             UpdateScoreUI();
+        }
+        if (playerHP <= 0)
+        {
+            Debug.Log("Game Over!");
+            SceneManager.LoadScene("SimpleMainMenu");
         }
     }
     public void UpdateScoreUI()

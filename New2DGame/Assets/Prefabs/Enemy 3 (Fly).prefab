@@ -45,13 +45,14 @@ GameObject:
   - component: {fileID: 6319651853378284640}
   - component: {fileID: 6319651853378284643}
   - component: {fileID: 6319651853378284652}
+  - component: {fileID: 1874673044}
   m_Layer: 0
   m_Name: Enemy 3 (Fly)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6319651853378284655
 Transform:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 6319651853378284644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.25, y: 2.55, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6319651852999615429}
@@ -111,8 +112,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fce97958da54a4c40a77191a048fa121, type: 3}
-  m_Color: {r: 0.7568628, g: 0.7568628, b: 0.7568628, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 0.673028, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,7 +161,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.17}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -204,16 +205,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6319651853378284644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7858e6c474eea7b49909ce71fb207b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  gameManagerScript: {fileID: 0}
   pushDistanse: 5
   enemyHealth: 2
   enemySpeed: 5
+  isShoter: 1
+  IsFlying: 0
   enemyStop: 1
+  playerEnemyXDistanceMax: 3
+--- !u!114 &1874673044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319651853378284644}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd12be5a3f314a740a5663707d252b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 4098883642888087194, guid: 30dcc04e329adf4439c5d1e9035725bd, type: 3}
 --- !u!1 &6319651853488782127
 GameObject:
   m_ObjectHideFlags: 0
