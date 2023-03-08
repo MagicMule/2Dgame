@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Sword
   - Missile
+  - Platform
   layers:
   - Default
   - TransparentFX
