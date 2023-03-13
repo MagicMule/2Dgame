@@ -11,10 +11,7 @@ public class MainManager : MonoBehaviour
     public int score;
 
     public TextMeshProUGUI highScoreText;
-    private void Update()
-    {
-        UpdateHighScore();
-    }
+
     private void Awake()
     {
         if (instance != null)
@@ -25,8 +22,11 @@ public class MainManager : MonoBehaviour
         instance = this; 
         DontDestroyOnLoad(gameObject);
     }
+    
+    /*
     public void UpdateHighScore()
     {
         highScoreText.text = "High Score: " + score;
     }
+    */
 }

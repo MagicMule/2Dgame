@@ -9,11 +9,9 @@ public class FollowPlayer : MonoBehaviour
     /// Following the gameobjekt player, used for camra control
     /// </summary>
     public GameObject playerGO;
-    public float offsetY;
+    public float offsetY = 0;
     public float offsetX = 0;
 
-    public bool FollowOnX = true;
-    public bool FollowOnXAndY = false;
     public int cameraFocus = 2;
 
     void Start()
@@ -33,16 +31,14 @@ public class FollowPlayer : MonoBehaviour
         switch (cameraFocus)
         {
             case 1:
-                FollowOnXAndY = false;
                 FollowThePlayerOnX();
                 break;
             case 2:
-                FollowOnX = false;
                 FollowThePlayerOnXAndY();
                 break;
         }
     }
-    // Camara follow Player On X
+    // Camara follow Player On X, with Ofset
     void FollowThePlayerOnX()
     {
         // When the Camra canges back to playerOnX, cange the y value to follow the playerGO

@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
     public GameObject Player;
-    public GameManagerSS gameManagerScript;
+    //public GameManagerSS gameManagerScript To Update score
 
     public float pushDistanse = 10f;
     public int enemyHealth = 10;
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Debug.Log("Enemy destroyed: " + gameObject.name);
-            gameManagerScript.UpdateScoreUI(); //Update Score
+            //gameManagerScript.UpdateScoreUI(); //Update Score
             Destroy(gameObject);
         }
 
