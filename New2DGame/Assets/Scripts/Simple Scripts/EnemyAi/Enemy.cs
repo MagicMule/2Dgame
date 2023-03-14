@@ -39,12 +39,17 @@ public class Enemy : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         // Players sword colliton with enemy
-        if (collision.gameObject.CompareTag("Sword"))
+        if (collision.gameObject.CompareTag("Sword") || collision.gameObject.CompareTag("Missile"))
         {
             Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
             enemyHealth -= 1;
             // Push enemy up and away from attack
             enemyRb.AddForce(new Vector2((gameObject.transform.position.x - Player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
+
+            if (collision.gameObject.CompareTag("Missile")) // if hit by missile, destriy missile
+            {
+                Destroy(collision.gameObject);
+            }
 
         }
         if (enemyHealth <= 0)
