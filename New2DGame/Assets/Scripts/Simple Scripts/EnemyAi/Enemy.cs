@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
-    public GameObject Player;
+    private GameObject player;
     //public GameManagerSS gameManagerScript To Update score
 
     public float pushDistanse = 10f;
@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
         EnemyMissileAttack();
     }
 
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
             Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
             enemyHealth -= 1;
             // Push enemy up and away from attack
-            enemyRb.AddForce(new Vector2((gameObject.transform.position.x - Player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
+            enemyRb.AddForce(new Vector2((gameObject.transform.position.x - player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
 
             if (collision.gameObject.CompareTag("Missile")) // if hit by missile, destriy missile
             {
@@ -65,7 +67,7 @@ public class Enemy : MonoBehaviour
     void EnemyMoveToPlayer()
     {
         //Disdance form player and enemy on the X axes
-        playerEnemyXDistance = Mathf.Abs(Player.transform.position.x - gameObject.transform.position.x);
+        playerEnemyXDistance = Mathf.Abs(player.transform.position.x - gameObject.transform.position.x);
 
         //Cheking distance and enemyStop bool
         if (playerEnemyXDistance < playerEnemyXDistanceMax && enemyStop)
@@ -74,7 +76,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            moveToPlayer = new Vector2(Player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
+            moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
             transform.Translate(Time.deltaTime * moveToPlayer);
         }
     }

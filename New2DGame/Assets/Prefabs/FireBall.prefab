@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  missileSpeed: 1
+  fireMode: 2
+  missileSpeed: 2
   targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &-6066134517969665356
 MonoBehaviour:

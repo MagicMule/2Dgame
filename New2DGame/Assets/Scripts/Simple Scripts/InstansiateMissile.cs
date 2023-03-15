@@ -5,17 +5,12 @@ using UnityEngine.UIElements;
 
 public class InstansiateMissile : MonoBehaviour
 {
+    public int missileDely = 2;
     public GameObject missilePrefab;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(InstansiatMissilePrefab), 1, 2);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InvokeRepeating(nameof(InstansiatMissilePrefab), 1, missileDely);
     }
     void InstansiatMissilePrefab()
     {
