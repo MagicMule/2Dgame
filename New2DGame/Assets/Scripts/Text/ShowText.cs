@@ -12,7 +12,7 @@ public class ShowText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        textElement.text = textValue;
     }
 
     // Update is called once per frame
