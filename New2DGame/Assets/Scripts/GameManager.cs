@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public int world { get; private set; }
+
     public int stage { get; private set; }
+
     public int lives { get; private set; }
 
     //public GameObject gameOverUI; // UI element to be seen at gameover
