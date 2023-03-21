@@ -5,19 +5,30 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     public Animator fadeText;
+    public float transitionTime = 1f;
 
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-            StartCoroutine(LoadNextScene());
+        {
+            LoadNextLevel();
+        }
     }
 
-    IEnumerator LoadNextScene()
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+
+    IEnumerator LoadLevel(int LevelIndex)
     {
         fadeText.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
-        Scene scene = SceneManager.GetActiveScene();
-        int nextLevelBuildIndex = 1 - scene.buildIndex;
-        SceneManager.LoadScene(nextLevelBuildIndex);
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(LevelIndex);
     }
+
 }
