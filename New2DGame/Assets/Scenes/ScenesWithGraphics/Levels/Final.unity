@@ -3820,6 +3820,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6892606245972157280, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
+      propertyPath: gameManagerScript
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6892606245972157291, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
       propertyPath: m_Name
       value: Player(V2)
