@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    // For specific incunter in PlayGrund
     [SerializeField]
     public List<GameObject> enemies;
 

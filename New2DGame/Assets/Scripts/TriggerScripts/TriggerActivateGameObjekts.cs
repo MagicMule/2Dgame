@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerActivateGameObjekts : MonoBehaviour
 {
+    //A specific script for an incunter in PlayeGrunds scene
     public GameObject centerPointEnemyTrigg;
 
     public GameObject enemyWave;

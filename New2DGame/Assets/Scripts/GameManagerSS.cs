@@ -11,11 +11,11 @@ public class GameManagerSS : MonoBehaviour
     public TextMeshProUGUI playerHPText;
 
     public int score = 0;
-    public int playerHP = 3;
+    public int playerHP = 1;
     // Start is called before the first frame update
     void Start()
     {
-
+        playerHP = GameManager.Instance.lives;
     }
 
     // Update is called once per frame

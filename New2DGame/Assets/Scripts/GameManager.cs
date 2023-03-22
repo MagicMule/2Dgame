@@ -13,13 +13,15 @@ public class GameManager : MonoBehaviour
 
     public int lives { get; private set; }
 
+    public int Health { get; private set; }
+
     //public GameObject gameOverUI; // UI element to be seen at gameover
  
 
 
     private void Awake()
     {
-        //This compnents gameobjekt to instansiate thoru all sceans
+        //This component gameobjekt to instansiate thoru all sceans
         if (Instance != null)
         {
             DestroyImmediate(gameObject); // Íf the compents is in scean, remov it as to not dubbel the gameobjekt
