@@ -139,5 +139,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu"); // loads the MainMenu
     }
+    public void LoadLevelName(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 
 }

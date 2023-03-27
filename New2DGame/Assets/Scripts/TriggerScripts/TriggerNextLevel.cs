@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TriggerNextLevel : MonoBehaviour
@@ -8,6 +9,7 @@ public class TriggerNextLevel : MonoBehaviour
 
     public bool nextLevel;
     public bool nextWorld;
+    public bool finalLevel;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //load next level
@@ -19,6 +21,10 @@ public class TriggerNextLevel : MonoBehaviour
         // load level 1 of next world
         {
             GameManager.Instance.NextWorld();
+        }
+        else if(collision.CompareTag("Player") && finalLevel)
+        {
+            GameManager.Instance.LoadLevelName("Final");
         }
     }
 }
