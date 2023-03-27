@@ -41,7 +41,58 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(SceneManager.GetActiveScene().name);
+        GetCurentScene();
+    }
 
+    //Updartes the World and level integers
+    public void GetCurentScene()
+    {
+        if(SceneManager.GetActiveScene().name == "1-1")
+        {
+            world = 1;
+            stage = 1;
+        }
+        else if (SceneManager.GetActiveScene().name == "1-2")
+        {
+            world = 1;
+            stage = 2;
+        }
+        else if (SceneManager.GetActiveScene().name == "1-3")
+        {
+            world = 1;
+            stage = 3;
+        }
+        else if (SceneManager.GetActiveScene().name == "2-1")
+        {
+            world = 2;
+            stage = 1;
+        }
+        else if (SceneManager.GetActiveScene().name == "2-2")
+        {
+            world = 2;
+            stage = 2;
+        }
+        else if (SceneManager.GetActiveScene().name == "2-3")
+        {
+            world = 2;
+            stage = 3;
+        }
+        else if (SceneManager.GetActiveScene().name == "3-1")
+        {
+            world = 3;
+            stage = 1;
+        }
+        else if (SceneManager.GetActiveScene().name == "3-2")
+        {
+            world = 3;
+            stage = 2;
+        }
+        else if (SceneManager.GetActiveScene().name == "3-3")
+        {
+            world = 3;
+            stage = 3;
+        }
     }
 
     // A new game resets lives and loads level 1 (World 1, stage 1) 
