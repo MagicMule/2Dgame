@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 22649348454219636}
   m_Layer: 0
   m_Name: Falling Rock
-  m_TagString: Enemy
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
