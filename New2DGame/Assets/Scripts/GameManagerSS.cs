@@ -15,7 +15,8 @@ public class GameManagerSS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerHP = GameManager.Instance.lives;
+        playerHP = GameManager.Instance.Health;
+        playerHP = 3;
     }
 
     // Update is called once per frame

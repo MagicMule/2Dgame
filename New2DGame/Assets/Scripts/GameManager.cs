@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     public int Health { get; private set; }
 
-    //public GameObject gameOverUI; // UI element to be seen at gameover
  
 
 
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
     // A new game resets lives and loads level 1 (World 1, stage 1) 
     public void NewGame()
     {
-        lives = 3;
+        Health = 3;
 
         LoadLevel(1, 1);
     }
