@@ -6,7 +6,8 @@ public class PlayerTakeDamge : MonoBehaviour
 {
     //
     public int playerPushBackMagnitude = 40;
-    public GameManagerSS gameManagerScript;
+
+    public PlayerHealthManager PlayerHealthManager;
 
     public Rigidbody2D playerRB;
 
@@ -18,8 +19,8 @@ public class PlayerTakeDamge : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Missile"))
         {
-            //Uppdat of UI when player hit
-            gameManagerScript.UpdatePlayerHPUI();
+            //Uppdate of UI when player hit
+            PlayerHealthManager.UpdatePlayerHPUI();
 
             //Push back player
             playerRB.AddForce(awayFromEnemyPushBack * playerPushBackMagnitude ,ForceMode2D.Impulse);

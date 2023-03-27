@@ -54,8 +54,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //AudioManager.instance.PlaySound2D("GameOver");
-        //gameOverUI.SetActive(true); // Activate the game Over screan
 
         NewGame(); // Cange to a new game
     }
@@ -72,6 +70,11 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         LoadLevel(world, stage + 1); //Stay in curent world and load nex stage
+    }
+
+    public void NextWorld()
+    {
+        LoadLevel(world + 1, 1);
     }
 
     // UI Input
