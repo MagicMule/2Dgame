@@ -8,7 +8,8 @@ public class FollowPlayer : MonoBehaviour
     /// <summary>
     /// Following the gameobjekt player, used for camra control
     /// </summary>
-    public GameObject playerGO;
+    private GameObject playerGO; // The player GameObjekt
+
     public float offsetY = 0;
     public float offsetX = 0;
 
@@ -16,6 +17,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Start()
     {
+        playerGO = GameObject.FindGameObjectWithTag("Player");
         offsetY = playerGO.transform.position.y;
     }
 

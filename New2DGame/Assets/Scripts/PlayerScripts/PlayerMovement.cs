@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //get left-right movment, from CharaterController
+        //get left-right movment, from CharaterController2D
         controller2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false; //Set Jump false, stop "dubble jumping"
     }
