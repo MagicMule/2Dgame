@@ -8,6 +8,7 @@ TagManager:
   - Sword
   - Missile
   - Platform
+  - PlayerMissile
   layers:
   - Default
   - TransparentFX

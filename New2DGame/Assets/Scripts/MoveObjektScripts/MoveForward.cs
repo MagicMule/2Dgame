@@ -5,16 +5,18 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     private Rigidbody2D rB;
+
     public int forwardSpeed = 1;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         rB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    // move objekt on the x axes 
     void Update()
     {
-        rB.velocity = new Vector2(1, 0);
+        transform.Translate(transform.up * forwardSpeed * Time.deltaTime, Space.World);
     }
 }

@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject sword;
+
     public GameObject missile;
+    public GameObject missileAttackPos;
 
     public bool swordAttackReady = true;
-
     public float swordAttackDeley = 0.5f;
+
+    public bool missileAttackReady = true;
+    public float missileAttackDeley = 0.5f;
+
+
     void Start()
     {
         swordAttackReady = true;
@@ -19,6 +26,10 @@ public class PlayerAttack : MonoBehaviour
         UseSwordAttack();
         ShotMissile();
     }
+
+
+
+
 
     //Attack with the gameobjekt "Sword"
     void UseSwordAttack()
@@ -31,26 +42,43 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(SwordAttack());
         }
     }
-    // Instansate Missile, att missle prefab postion
-    void ShotMissile()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Instantiate(missile, transform.position + new Vector3(0.5f, 0, 0), transform.rotation);
-        }
-    }
-    // The objekts becomes unactive withen 0.5 secunds.
+
+    //This instasate the sword for 0.2 sec and then starts SwordDeley
     IEnumerator SwordAttack()
     {
-        swordAttackReady = false;
-        yield return new WaitForSeconds(0.2f);
+        swordAttackReady = false; 
+        yield return new WaitForSeconds(0.2f); //The sword objekt is active for 0.2 sec
         sword.SetActive(false);
         StartCoroutine(SwordDely());
     }
+
     //delay befor player can make new attack
     IEnumerator SwordDely()
     {
         yield return new WaitForSeconds(swordAttackDeley);
         swordAttackReady = true;
+    }
+
+
+
+
+
+
+    // Instansate Missile, att missle prefab postion
+    void ShotMissile()
+    {
+        if (Input.GetKeyDown(KeyCode.L) && missileAttackReady)
+        {
+            StartCoroutine(MissileAttack());
+        }
+    }
+
+    // missile instasiate at missileAttackPos
+    IEnumerator MissileAttack()
+    {
+        missileAttackReady = false;
+        Instantiate(missile, missileAttackPos.transform.position, missileAttackPos.transform.rotation);
+        yield return new WaitForSeconds(missileAttackDeley);
+        missileAttackReady = true;
     }
 }

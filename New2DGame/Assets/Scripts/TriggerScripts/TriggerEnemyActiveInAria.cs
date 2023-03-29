@@ -12,5 +12,6 @@ public class TriggerEnemyActiveInAria : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().enabled = true;
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
+
     }
 }
