@@ -1,26 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyPatrol : MonoBehaviour
 {
 
-    [SerializeField]
-    float moveSpeed = 1f;
+    public CharacterController2D controller2D;
 
-    public CharacterController2D characterController;
+    public float moveSpeed = 1f;
 
-    Rigidbody2D enemyRB;
-
-    void Start()
-    {
-        enemyRB = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        characterController.Move(moveSpeed, false, false);
+
     }
 
+    private void FixedUpdate()
+    {
+        controller2D.Move(moveSpeed * Time.fixedDeltaTime, false, false);
+    }
 }

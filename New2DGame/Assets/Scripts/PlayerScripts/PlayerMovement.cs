@@ -5,13 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller2D;
+
     public float runSpeed = 40f;
-    float horizontalMove = 0;
+    public float horizontalMove = 0;
     bool jump = false;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
