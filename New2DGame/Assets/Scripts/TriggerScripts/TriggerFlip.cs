@@ -9,7 +9,11 @@ public class TriggerFlip : MonoBehaviour
     // if the Trigger is not touching a Platfomr, turn objekt
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(gameObject.name + " stoped toutching " + collision.gameObject);
-        enemyPatrol.Turn();
+        if (!collision.gameObject.CompareTag("AktivateEnemy")) // Ignore player activate enemy triggers
+        {
+            Debug.Log(gameObject.name + " stoped toutching " + collision.gameObject);
+            enemyPatrol.Turn();
+        }
+
     }
 }

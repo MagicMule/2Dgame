@@ -14,9 +14,9 @@ public class Enemy : MonoBehaviour
 
     private Vector3 moveToPlayer;
 
-    public bool isShoter = false;
-    public bool IsFlying = false;
-    public bool enemyStop = false;
+    public bool isShoter = false; // if enemy is to shot
+    public bool enemyStop = false; // if enemy is to stop at distace
+    public bool enemyMoveTo = true; // if enemy is to move to player
 
     private float playerEnemyXDistance;
     public float playerEnemyXDistanceMax = 3;
@@ -66,19 +66,24 @@ public class Enemy : MonoBehaviour
     //Movinge to player on X
     void EnemyMoveToPlayer()
     {
-        //Disdance form player and enemy on the X axes
-        playerEnemyXDistance = Mathf.Abs(player.transform.position.x - gameObject.transform.position.x);
+        if(enemyMoveTo)
+        {
+            //Disdance form player and enemy on the X axes
+            playerEnemyXDistance = Mathf.Abs(player.transform.position.x - gameObject.transform.position.x);
 
-        //Cheking distance and enemyStop bool
-        if (playerEnemyXDistance < playerEnemyXDistanceMax && enemyStop)
-        {
-            //Stop
+            //Cheking distance and enemyStop bool
+            if (playerEnemyXDistance < playerEnemyXDistanceMax && enemyStop)
+            {
+                //Stop
+            }
+            else
+            {
+                moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
+                transform.Translate(Time.deltaTime * moveToPlayer);
+            }
         }
-        else
-        {
-            moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
-            transform.Translate(Time.deltaTime * moveToPlayer);
-        }
+
+
     }
     //cheks if enemy is to shot a missile
     void EnemyMissileAttack()
