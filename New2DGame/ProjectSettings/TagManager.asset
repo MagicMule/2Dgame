@@ -9,6 +9,7 @@ TagManager:
   - Missile
   - Platform
   - PlayerMissile
+  - Platfrom
   layers:
   - Default
   - TransparentFX
