@@ -3723,7 +3723,7 @@ Transform:
   - {fileID: 152654282}
   - {fileID: 337245157}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370486188
 GameObject:
@@ -3786,7 +3786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8027711637297979040, guid: 33374d1cff25e6f4aa49268267e24d3b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027711637297979040, guid: 33374d1cff25e6f4aa49268267e24d3b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3969,17 +3969,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player(V2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6892606245972157291, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6892606245972157295, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6892606245972157295, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3733177
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 6892606245972157295, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3574162
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 6892606245972157295, guid: b75595dfbdf58044a8ca3ae1b8b0cbc0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4127,6 +4131,14 @@ PrefabInstance:
     - target: {fileID: 4316759481563428609, guid: 435ed41cf19de704996c49f81da47010, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316759481563428612, guid: 435ed41cf19de704996c49f81da47010, type: 3}
+      propertyPath: teleportDeley
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316759481563428613, guid: 435ed41cf19de704996c49f81da47010, type: 3}
+      propertyPath: fireRate
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ed41cf19de704996c49f81da47010, type: 3}

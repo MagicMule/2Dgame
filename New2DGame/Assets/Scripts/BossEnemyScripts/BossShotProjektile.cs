@@ -21,19 +21,19 @@ public class BossShotProjektile : MonoBehaviour
     //Instasate the prefab
     void InstansiateBossAttack()
     {
-        // If Boss is on left side
+        // If Boss is on left side -> shot right
         if (transform.position.x < 3.5f)
         {
             Instantiate(projektilePrefab[1], AttackInstasiateLockation(), projektilePrefab[1].transform.rotation);
         }
-        // If Boss is on right side
+        // If Boss is on right side -> shot left
         else if (transform.position.x > 3.5f)
         {
             Instantiate(projektilePrefab[0], AttackInstasiateLockation(), projektilePrefab[0].transform.rotation);
         }
     }
 
-    //place were the attack will instansiate
+    //place were the attack/missile will instansiate
     Vector3 AttackInstasiateLockation()
     {
 

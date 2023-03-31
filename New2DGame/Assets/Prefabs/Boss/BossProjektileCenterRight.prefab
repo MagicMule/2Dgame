@@ -102,6 +102,7 @@ MonoBehaviour:
   rotationSpeedY: 400
   rotationSpeedZ: 400
   renderer: {fileID: 5215616899425269725}
+  cangeColorFrequency: 0.1
 --- !u!61 &5215616899425269723
 BoxCollider2D:
   m_ObjectHideFlags: 0

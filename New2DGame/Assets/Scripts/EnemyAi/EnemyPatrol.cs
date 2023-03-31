@@ -10,14 +10,6 @@ public class EnemyPatrol : MonoBehaviour
 
     public float moveSpeed = 1f;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-           Turn();
-        }
-    }
-
     private void FixedUpdate()
     {
         controller2D.Move(moveSpeed * Time.fixedDeltaTime, false, false); // move with charaktercontroller2D script
