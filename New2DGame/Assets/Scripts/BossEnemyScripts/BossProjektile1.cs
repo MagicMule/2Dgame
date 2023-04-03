@@ -8,13 +8,17 @@ public class BossProjektile1 : MonoBehaviour
     public int rotationSpeedY;
     public int rotationSpeedZ;
     public new SpriteRenderer renderer;
+    public float cangeColorFrequency = 5f;
 
-    public float cangeColorFrequency = 0.0000001f;
-
+    public bool cangeCollorRandom = true;
     void Start()
     {
         //Cange color by given time
-        InvokeRepeating("RandomColor", 0.1f, cangeColorFrequency);
+        if (cangeCollorRandom)
+        {
+            InvokeRepeating(nameof(RandomColor), 0.1f, cangeColorFrequency);
+        }
+        
 
         Material material = renderer.material;
         material.color = new Color(0.5f, 1.0f, 0.3f, 0.4f);

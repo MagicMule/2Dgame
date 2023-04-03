@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public int Health { get; private set; }
 
+    public bool Key { get; private set; }
+
  
 
 
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //update the gamanger, when entering a scene in editor
     private void Start()
     {
         Debug.Log(SceneManager.GetActiveScene().name);
@@ -106,7 +109,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
 
-        NewGame(); // Cange to a new game
+        //NewGame(); // Cange to a new game
+        LoadLevel(world, stage); // restart/load curent level
     }
 
     // Loding difrent scenes based on world and stage
@@ -142,6 +146,18 @@ public class GameManager : MonoBehaviour
     public void LoadLevelName(string levelName)
     {
         SceneManager.LoadScene(levelName);
+    }
+
+    // when player pick upp key
+    public void GetKey()
+    {
+        Key = true;
+    }
+
+    //Spawn a gameobjet att lokation
+    public void SpawnEnemy(GameObject enemy, Vector2 spawnPos, Quaternion rotationDeg)
+    {
+        Instantiate(enemy, spawnPos, rotationDeg);
     }
 
 }
