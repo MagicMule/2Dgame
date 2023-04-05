@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
             enemyHealth -= 1;
+
             // Push enemy up and away from attack
             enemyRb.AddForce(new Vector2((gameObject.transform.position.x - player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
 
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour
             }
 
         }
+        // trigger gameover
         if (enemyHealth <= 0)
         {
             Debug.Log("Enemy destroyed: " + gameObject.name);
