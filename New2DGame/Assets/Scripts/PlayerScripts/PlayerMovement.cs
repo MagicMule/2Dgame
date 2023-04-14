@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         //player Jump, from CharaterController
         if (Input.GetButtonDown("Jump"))
         {
+            Debug.Log("Jump button presed");
             jump = true;
         }
     }
