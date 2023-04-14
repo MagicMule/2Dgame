@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log(SceneManager.GetActiveScene().name);
+        GetCurentScene();
+
         //This component gameobjekt to instansiate thoru all sceans
         if (Instance != null)
         {
@@ -44,8 +47,8 @@ public class GameManager : MonoBehaviour
     //update the gamanger, when entering a scene in editor
     private void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
-        GetCurentScene();
+        //Debug.Log(SceneManager.GetActiveScene().name);
+        //GetCurentScene();
     }
 
     //Updartes the World and level integers
@@ -96,7 +99,7 @@ public class GameManager : MonoBehaviour
             world = 3;
             stage = 3;
         }
-        else if (SceneManager.GetActiveScene().name == "Final")
+        else if (SceneManager.GetActiveScene().name == "0-0") // final
         {
             world = 0;
             stage = 0;
@@ -106,9 +109,18 @@ public class GameManager : MonoBehaviour
     // A new game resets lives and loads level 1 (World 1, stage 1) 
     public void NewGame()
     {
+        //Upddate World and Stage
+        world = 1;
+        stage = 1;
+
         Health = 3;
 
         LoadLevel(1, 1);
+    }
+
+    public void GoToIntroScene()
+    {
+        LoadLevelName("IntroText");
     }
 
     public void GameOver()
