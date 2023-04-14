@@ -12,7 +12,7 @@ public class TriggerDEathZone : MonoBehaviour
             GameManager.Instance.GameOver();
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Missile"))
         {
             Debug.Log("Other gameobjekt is to be destroyed: " + collision.gameObject.name + " Destroyed");
             Destroy(collision.gameObject);
