@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     //Updartes the World and level integers
     public void GetCurentScene()
     {
-        if(SceneManager.GetActiveScene().name == "1-1")
+        if (SceneManager.GetActiveScene().name == "1-1")
         {
             world = 1;
             stage = 1;
@@ -96,6 +96,11 @@ public class GameManager : MonoBehaviour
             world = 3;
             stage = 3;
         }
+        else if (SceneManager.GetActiveScene().name == "Final")
+        {
+            world = 0;
+            stage = 0;
+        }
     }
 
     // A new game resets lives and loads level 1 (World 1, stage 1) 
@@ -108,7 +113,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
         //NewGame(); // Cange to a new game
         LoadLevel(world, stage); // restart/load curent level
     }

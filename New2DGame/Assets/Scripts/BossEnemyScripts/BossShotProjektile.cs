@@ -5,6 +5,8 @@ using UnityEngine;
 public class BossShotProjektile : MonoBehaviour
 {
     public float fireRate = 3f;
+    public float AttackHight = 0.2f;
+
     public List<GameObject> projektilePrefab;
     // Start is called before the first frame update
     void Start()
@@ -41,12 +43,12 @@ public class BossShotProjektile : MonoBehaviour
         // If Boss is on left side
         if (transform.position.x < 3.5f)
         {
-            vectorSpawn = new Vector3(transform.position.x + 1, transform.position.y + 0.3f, transform.position.z);
+            vectorSpawn = new Vector3(transform.position.x + 1, transform.position.y + AttackHight, transform.position.z);
         }
         // If Boss is on right side
         else if (transform.position.x > 3.5f)
         {
-            vectorSpawn = new Vector3(transform.position.x - 1, transform.position.y + 0.3f, transform.position.z);
+            vectorSpawn = new Vector3(transform.position.x - 1, transform.position.y + AttackHight, transform.position.z);
         }
 
 
