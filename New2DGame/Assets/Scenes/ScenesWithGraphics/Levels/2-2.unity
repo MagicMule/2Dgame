@@ -47478,6 +47478,10 @@ PrefabInstance:
       propertyPath: PlayerHealthManager
       value: 
       objectReference: {fileID: 366856233}
+    - target: {fileID: 4252575669537127803, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+      propertyPath: missileAttackReady
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
 --- !u!1 &1534494559
