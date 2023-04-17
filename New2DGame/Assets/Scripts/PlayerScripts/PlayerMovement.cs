@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -21,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Jump button presed");
             jump = true;
+        }
+
+        // Check for current world and stage
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Debug.Log(GameManager.Instance.world + " " + GameManager.Instance.stage);
         }
     }
     private void FixedUpdate()

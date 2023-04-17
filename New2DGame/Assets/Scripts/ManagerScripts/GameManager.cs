@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,6 +51,12 @@ public class GameManager : MonoBehaviour
         //Debug.Log(SceneManager.GetActiveScene().name);
         //GetCurentScene();
     }
+
+    private void Update()
+    {
+        GetCurentScene();
+    }
+
 
     //Updartes the World and level integers
     public void GetCurentScene()
@@ -174,6 +181,14 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemy(GameObject enemy, Vector2 spawnPos, Quaternion rotationDeg)
     {
         Instantiate(enemy, spawnPos, rotationDeg);
+    }
+
+    public void GetCurentLevel()
+    {
+        if (Input.GetButtonDown("W"))
+        {
+            Debug.Log(world + " " + stage);
+        }
     }
 
 }
