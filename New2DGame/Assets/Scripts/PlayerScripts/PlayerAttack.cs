@@ -72,6 +72,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L) && missileAttackReady)
         {
+            attackAnimation.SetBool("spelAttack", true);
             StartCoroutine(MissileAttack());
         }
     }
@@ -79,9 +80,12 @@ public class PlayerAttack : MonoBehaviour
     // missile instasiate at missileAttackPos
     IEnumerator MissileAttack()
     {
+        
         missileAttackReady = false;
         Instantiate(missile, missileAttackPos.transform.position, missileAttackPos.transform.rotation);
         yield return new WaitForSeconds(missileAttackDeley);
         missileAttackReady = true;
+
+        attackAnimation.SetBool("spelAttack", false);
     }
 }
