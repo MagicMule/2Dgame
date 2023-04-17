@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 4252575669537127796}
   - component: {fileID: 4252575669537127803}
   - component: {fileID: 4252575669537127800}
+  - component: {fileID: 1653334336}
   m_Layer: 10
   m_Name: Player(V3)
   m_TagString: Player
@@ -675,11 +676,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 3505508591899278362}
+  attackAnimation: {fileID: 1653334336}
   missile: {fileID: 6223104243673238270, guid: 081fc75550a3dba4a944420b5b9f226b, type: 3}
   missileAttackPos: {fileID: 7251740803761528052}
   swordAttackReady: 0
   swordAttackDeley: 0.5
-  missileAttackReady: 0
+  missileAttackReady: 1
   missileAttackDeley: 0.5
 --- !u!114 &4252575669537127800
 MonoBehaviour:
@@ -696,6 +698,26 @@ MonoBehaviour:
   playerPushBackMagnitude: 40
   PlayerHealthManager: {fileID: 0}
   playerRB: {fileID: 4252575669537127802}
+--- !u!95 &1653334336
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252575669537127795}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 647ce36eddd2ced46b15c468c7de9cb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4252575670212039916
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +899,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 838301165362824636, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 838301165362824636, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 838301165362824637, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}

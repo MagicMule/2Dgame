@@ -52,12 +52,6 @@ public class GameManager : MonoBehaviour
         //GetCurentScene();
     }
 
-    private void Update()
-    {
-        GetCurentScene();
-    }
-
-
     //Updartes the World and level integers
     public void GetCurentScene()
     {
@@ -181,14 +175,6 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemy(GameObject enemy, Vector2 spawnPos, Quaternion rotationDeg)
     {
         Instantiate(enemy, spawnPos, rotationDeg);
-    }
-
-    public void GetCurentLevel()
-    {
-        if (Input.GetButtonDown("W"))
-        {
-            Debug.Log(world + " " + stage);
-        }
     }
 
 }

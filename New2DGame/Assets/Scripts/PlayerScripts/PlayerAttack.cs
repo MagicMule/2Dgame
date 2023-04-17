@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject sword;
 
+    public Animator attackAnimation;
+
     public GameObject missile;
     public GameObject missileAttackPos;
 
@@ -37,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
         // if K is presed when swordAttackReady is true, create the sword gameobjekt and start "SwordAttack"
         if (Input.GetKeyDown(KeyCode.K) && swordAttackReady)
         {
-
+            attackAnimation.SetBool("swordAttack", true); // Enter the sword attack animation
             sword.SetActive(true);
             StartCoroutine(SwordAttack());
         }
@@ -50,6 +52,7 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(0.2f); //The sword objekt is active for 0.2 sec
         sword.SetActive(false);
         StartCoroutine(SwordDely());
+        attackAnimation.SetBool("swordAttack", false); // Exsit the sword attack animation
     }
 
     //delay befor player can make new attack
