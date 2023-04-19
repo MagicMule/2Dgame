@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
-        GetCurentScene();
 
         //This component gameobjekt to instansiate thoru all sceans
         if (Instance != null)
@@ -36,6 +35,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        GetCurentScene(); //update the gamanger, when entering a scene in editor
+        Debug.Log("The curent Level is: " + world + "-" + stage);
     }
     private void OnDestroy() 
     {
@@ -45,11 +46,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //update the gamanger, when entering a scene in editor
-    private void Start()
+    public void Update()
     {
-        //Debug.Log(SceneManager.GetActiveScene().name);
-        //GetCurentScene();
+        //Manual check for curent level
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            GetCurentScene(); // updat world and stage
+            Debug.Log("Current world and stage: " + world + "-" + stage);
+            
+        }
     }
 
     //Updartes the World and level integers
@@ -141,6 +146,11 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        GetCurentScene(); //update the gamanger, when entering a scene in editor
+
+        Debug.Log(world + "-" + stage);
+        Debug.Log(SceneManager.GetActiveScene().name);
+
         LoadLevel(world, stage + 1); //Stay in curent world and load nex stage
     }
 

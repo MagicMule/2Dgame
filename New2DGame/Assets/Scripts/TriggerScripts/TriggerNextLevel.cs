@@ -15,6 +15,7 @@ public class TriggerNextLevel : MonoBehaviour
         //load next level
         if (collision.CompareTag("Player") && nextLevel)
         {
+            Debug.Log(GameManager.Instance.world + "-" + GameManager.Instance.stage);
             GameManager.Instance.NextLevel();
         }
         else if (collision.CompareTag("Player") && nextWorld)
@@ -24,7 +25,7 @@ public class TriggerNextLevel : MonoBehaviour
         }
         else if(collision.CompareTag("Player") && finalLevel)
         {
-            GameManager.Instance.LoadLevelName("Final");
+            GameManager.Instance.LoadLevelName("0-0");
         }
     }
 }
