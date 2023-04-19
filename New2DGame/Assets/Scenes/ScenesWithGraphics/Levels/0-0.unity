@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4252575669537127799, guid: db1993abba5060d43a64ffb13f042830, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4252575669537127799, guid: db1993abba5060d43a64ffb13f042830, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,6 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+--- !u!82 &22413878 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_PrefabInstance: {fileID: 22413877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93866079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,6 +3816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7858e6c474eea7b49909ce71fb207b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAudio: {fileID: 22413878}
+  enemyGetHitByPlayerSound: {fileID: 0}
   pushDistanse: 10
   enemyHealth: 10
   enemySpeed: 5
@@ -4024,7 +4031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6008249138685663618, guid: 9b0b4cd38115f9744b8b54fe3f965cf2, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6008249138685663618, guid: 9b0b4cd38115f9744b8b54fe3f965cf2, type: 3}
       propertyPath: m_LocalPosition.x

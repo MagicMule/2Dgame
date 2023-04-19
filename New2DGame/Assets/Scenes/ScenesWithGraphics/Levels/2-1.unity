@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (2)
@@ -286,6 +290,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1791345686679201042, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1791345686679201050, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
       propertyPath: m_Name
       value: Enemy 3 (Archer)
@@ -567,6 +575,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (7)
@@ -2702,6 +2714,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (1)
@@ -2768,6 +2784,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (6)
@@ -2961,6 +2981,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (8)
@@ -44336,6 +44360,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (5)
@@ -44506,6 +44534,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1791345686679201042, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1791345686679201050, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
       propertyPath: m_Name
       value: Enemy 3 (Archer) (1)
@@ -44572,6 +44604,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1804359095}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy
@@ -44648,6 +44684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+--- !u!82 &1804359095 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_PrefabInstance: {fileID: 1804359094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1918007130
 GameObject:
   m_ObjectHideFlags: 0

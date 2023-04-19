@@ -6,7 +6,11 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D enemyRb;
     private GameObject player;
-    //public GameManagerSS gameManagerScript To Update score
+
+
+    public AudioSource playerAudio; //The AudioSurce on the player objekt
+
+    public AudioClip enemyGetHitByPlayerSound;
 
     public float pushDistanse = 10f;
     public int enemyHealth = 10;
@@ -43,6 +47,8 @@ public class Enemy : MonoBehaviour
         // Players sword colliton with enemy
         if (collision.gameObject.CompareTag("Sword") || collision.gameObject.CompareTag("PlayerMissile"))
         {
+            playerAudio.PlayOneShot(enemyGetHitByPlayerSound, 1.0f); //play when enemy is hit
+
             Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
             enemyHealth -= 1;
 
@@ -54,14 +60,16 @@ public class Enemy : MonoBehaviour
                 Destroy(collision.gameObject);
             }
 
+            // Destroy enemy if no more health
+            if (enemyHealth <= 0)
+            {
+
+                Debug.Log("Enemy destroyed: " + gameObject.name);
+                Destroy(gameObject);
+            }
+
         }
-        // trigger gameover
-        if (enemyHealth <= 0)
-        {
-            Debug.Log("Enemy destroyed: " + gameObject.name);
-            //gameManagerScript.UpdateScoreUI(); //Update Score
-            Destroy(gameObject);
-        }
+
 
     }
 
@@ -87,7 +95,7 @@ public class Enemy : MonoBehaviour
 
 
     }
-    //cheks if enemy is to shot a missile
+    //cheks if enemy is to shot missile
     void EnemyMissileAttack()
     {
         if (isShoter)

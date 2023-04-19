@@ -435,6 +435,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1469460582}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (1)
@@ -47346,6 +47350,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6834521264046988829, guid: c894a0f28c7435d4eace6f5d9473ff3a, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1469460582}
     - target: {fileID: 6834521264046988830, guid: c894a0f28c7435d4eace6f5d9473ff3a, type: 3}
       propertyPath: m_Name
       value: Enemy 2 (Jump)
@@ -47408,6 +47416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1469460582}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (2)
@@ -47484,6 +47496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+--- !u!82 &1469460582 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_PrefabInstance: {fileID: 1469460581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534494559
 GameObject:
   m_ObjectHideFlags: 0
@@ -49726,6 +49743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1469460582}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy

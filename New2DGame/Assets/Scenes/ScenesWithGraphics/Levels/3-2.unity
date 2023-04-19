@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (4)
@@ -712,6 +716,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (2)
@@ -2852,6 +2860,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+--- !u!82 &1111864246 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_PrefabInstance: {fileID: 1111864245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1129282482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1109119485753124192, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
@@ -2916,6 +2929,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (3)
@@ -3028,6 +3045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8268765280973164959, guid: d487f08992bcef543a6d72e11a6d8849, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d487f08992bcef543a6d72e11a6d8849, type: 3}
 --- !u!1001 &1456866130
@@ -3085,6 +3106,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (1)
@@ -3146,6 +3171,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy
@@ -3338,6 +3367,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1109119485753124200, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1111864246}
     - target: {fileID: 1109119485753124253, guid: 1c0374d98e3b74e4f9794b25870c5605, type: 3}
       propertyPath: m_Name
       value: MoveLeftAndRightEnemy (5)
