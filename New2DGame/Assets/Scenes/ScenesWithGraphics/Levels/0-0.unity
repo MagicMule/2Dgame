@@ -3817,7 +3817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAudio: {fileID: 22413878}
-  enemyGetHitByPlayerSound: {fileID: 0}
+  enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   pushDistanse: 10
   enemyHealth: 10
   enemySpeed: 5

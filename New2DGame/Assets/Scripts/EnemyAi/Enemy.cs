@@ -67,10 +67,7 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Enemy destroyed: " + gameObject.name);
                 Destroy(gameObject);
             }
-
         }
-
-
     }
 
     //Movinge to player on X
