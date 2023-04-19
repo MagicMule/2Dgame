@@ -9,6 +9,13 @@ public class PlayerAttack : MonoBehaviour
 
     public Animator attackAnimation;
 
+    public AudioClip missileAttackSound;
+    public AudioClip attackSound;
+
+    private AudioSource playerAoudio;
+
+
+
     public GameObject missile;
     public GameObject missileAttackPos;
 
@@ -21,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
+        playerAoudio = GetComponent<AudioSource>();
         swordAttackReady = true;
     }
     void Update()
@@ -39,6 +47,8 @@ public class PlayerAttack : MonoBehaviour
         // if K is presed when swordAttackReady is true, create the sword gameobjekt and start "SwordAttack"
         if (Input.GetKeyDown(KeyCode.K) && swordAttackReady)
         {
+            playerAoudio.PlayOneShot(attackSound, 1.0f); // Play attack sound
+
             attackAnimation.SetBool("swordAttack", true); // Enter the sword attack animation
             sword.SetActive(true);
             StartCoroutine(SwordAttack());
@@ -72,6 +82,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L) && missileAttackReady)
         {
+            playerAoudio.PlayOneShot(missileAttackSound, 1.0f);
+
             attackAnimation.SetBool("spelAttack", true);
             StartCoroutine(MissileAttack());
         }

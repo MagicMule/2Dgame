@@ -6,10 +6,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller2D;
+    public AudioClip jumpSound;
+
+    private AudioSource playerAudio;
 
     public float runSpeed = 40f;
     public float horizontalMove = 0;
     bool jump = false;
+
+    private void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -20,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         //player Jump, from CharaterController
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log("Jump button presed");
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
             jump = true;
         }
     }
