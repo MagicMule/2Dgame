@@ -15,8 +15,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Animator jumpAnimation; // Jump animation, to be active when player is not grounded 
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
+    private bool m_Grounded;            // Whether or not the player is grounded.
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
@@ -65,7 +65,7 @@ public class CharacterController2D : MonoBehaviour
         PlayJumpAnimation();
     }
 
-
+    // Player jump animation, uses bool, on or off
     public void PlayJumpAnimation()
     {
         if (!m_Grounded)
@@ -89,6 +89,7 @@ public class CharacterController2D : MonoBehaviour
                 crouch = true;
             }
         }
+
 
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -125,6 +126,7 @@ public class CharacterController2D : MonoBehaviour
 
             // Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+
             // And then smoothing it out and applying it to the character
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
@@ -141,6 +143,7 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
+
         // If the player should jump...
         if (m_Grounded && jump)
         {

@@ -5,25 +5,23 @@ using UnityEngine;
 
 public class MoveTrigg : MonoBehaviour
 {
-    [SerializeField]
-    private float frequency = 1.0f;
+    /// <summary>
+    /// Apply general tregonometrik movement on objekt
+    /// Cerkular movement or up and down movement
+    /// </summary>
 
     [SerializeField]
-    private float waveLength = 1.0f;
+    public float frequency = 1.0f;
 
     [SerializeField]
-    private bool CircleOn = false;
+    public float waveLength = 1.0f;
 
     [SerializeField]
-    private bool upDownOn = false;
+    public bool CircleOn = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public bool upDownOn = false;
 
-    // Update is called once per frame
     void Update()
     {
         if (CircleOn)
@@ -34,14 +32,15 @@ public class MoveTrigg : MonoBehaviour
         {
             TriggMovmentUpDown();
         }
-
     }
+
     void TriggMovmentCircle()
     {
         transform.localPosition = new Vector3(Mathf.Sin(2 * Mathf.PI * Time.time * frequency) * waveLength,
                                               Mathf.Cos(2 * Mathf.PI * Time.time * frequency) * waveLength,
                                               0);                                                            //"Time.time" is a varibal that canges over time, an so changes positon
     }
+
     void TriggMovmentUpDown()
     {
         transform.localPosition = new Vector3(0, Mathf.Sin(2 * Mathf.PI * Time.time * frequency) * waveLength, 0);

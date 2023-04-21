@@ -6,10 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller2D;
+
     public AudioClip jumpSound;
-
-    //public Animator playerJumpAnimtion; // player jump animation
-
     private AudioSource playerAudio;
 
     public float runSpeed = 40f;
@@ -25,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //Calculte player horizontal movment
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-     
         
         //player Jump, from CharaterController
         if (Input.GetButtonDown("Jump"))
@@ -36,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     private void FixedUpdate()
+    {
+        PlayerMove();
+    }
+    void PlayerMove()
     {
         //get left-right movment, from CharaterController2D
         controller2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);

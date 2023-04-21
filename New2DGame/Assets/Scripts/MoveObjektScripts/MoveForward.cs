@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
+    // Simple move forward script
+
     private Rigidbody2D rB;
 
     public int forwardSpeed = 1;

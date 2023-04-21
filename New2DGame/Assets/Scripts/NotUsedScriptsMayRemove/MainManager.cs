@@ -5,12 +5,7 @@ using TMPro;
 
 public class MainManager : MonoBehaviour
 {
-    // Trying to save score
     public static MainManager instance;
-
-    public int score;
-
-    public TextMeshProUGUI highScoreText;
 
     private void Awake()
     {
@@ -23,10 +18,4 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    /*
-    public void UpdateHighScore()
-    {
-        highScoreText.text = "High Score: " + score;
-    }
-    */
 }

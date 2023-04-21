@@ -5,25 +5,32 @@ using UnityEngine.SocialPlatforms;
 
 public class PlayerAttack : MonoBehaviour
 {
+    /// <summary>
+    /// Handel of Player attacks, Sword and missile.
+    /// Manage deleay of player attack.
+    /// </summary>
     public GameObject sword;
 
     public Animator attackAnimation;
 
-    public AudioClip missileAttackSound;
-    public AudioClip attackSound;
-
     private AudioSource playerAoudio;
 
+    //Sword
+    public bool swordAttackReady = true;
+    public float swordAttackDeley = 0.5f;
+    public float swordAttackDuration = 0.2f;
+    public AudioClip attackSound;
+    public float swordAttackSoundVolume = 1.0f;
 
-
+    //Missile
+    public bool missileAttackReady = true;
+    public float missileAttackDeley = 0.5f;
+    public float missileAttackDuration = 0.2f;
+    public AudioClip missileAttackSound;
+    public float missileAttackSoundVolume = 1.0f;
     public GameObject missile;
     public GameObject missileAttackPos;
 
-    public bool swordAttackReady = true;
-    public float swordAttackDeley = 0.5f;
-
-    public bool missileAttackReady = true;
-    public float missileAttackDeley = 0.5f;
 
 
     void Start()
@@ -31,6 +38,7 @@ public class PlayerAttack : MonoBehaviour
         playerAoudio = GetComponent<AudioSource>();
         swordAttackReady = true;
     }
+
     void Update()
     {
         UseSwordAttack();
@@ -47,10 +55,10 @@ public class PlayerAttack : MonoBehaviour
         // if K is presed when swordAttackReady is true, create the sword gameobjekt and start "SwordAttack"
         if (Input.GetKeyDown(KeyCode.K) && swordAttackReady)
         {
-            playerAoudio.PlayOneShot(attackSound, 1.0f); // Play attack sound
-
+            playerAoudio.PlayOneShot(attackSound, swordAttackSoundVolume); // Play attack sound
             attackAnimation.SetBool("swordAttack", true); // Enter the sword attack animation
-            sword.SetActive(true);
+
+            sword.SetActive(true); // Activate the sword gameobjekt
             StartCoroutine(SwordAttack());
         }
     }
@@ -59,7 +67,9 @@ public class PlayerAttack : MonoBehaviour
     IEnumerator SwordAttack()
     {
         swordAttackReady = false; 
-        yield return new WaitForSeconds(0.2f); //The sword objekt is active for 0.2 sec
+
+        yield return new WaitForSeconds(swordAttackDuration); // Time sword objekt is active
+
         sword.SetActive(false);
         StartCoroutine(SwordDely());
         attackAnimation.SetBool("swordAttack", false); // Exsit the sword attack animation
@@ -68,7 +78,7 @@ public class PlayerAttack : MonoBehaviour
     //delay befor player can make new attack
     IEnumerator SwordDely()
     {
-        yield return new WaitForSeconds(swordAttackDeley);
+        yield return new WaitForSeconds(swordAttackDeley); // Time befor player can make another sword attack
         swordAttackReady = true;
     }
 
@@ -82,7 +92,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L) && missileAttackReady)
         {
-            playerAoudio.PlayOneShot(missileAttackSound, 1.0f);
+            playerAoudio.PlayOneShot(missileAttackSound, missileAttackSoundVolume); // play missila attack soundclip
 
             attackAnimation.SetBool("spelAttack", true);
             StartCoroutine(MissileAttack());
@@ -95,7 +105,9 @@ public class PlayerAttack : MonoBehaviour
         
         missileAttackReady = false;
         Instantiate(missile, missileAttackPos.transform.position, missileAttackPos.transform.rotation);
-        yield return new WaitForSeconds(missileAttackDeley);
+
+        yield return new WaitForSeconds(missileAttackDeley); // Time befor player can make onather missile attack
+
         missileAttackReady = true;
 
         attackAnimation.SetBool("spelAttack", false);

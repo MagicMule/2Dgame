@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class FallingObjektRange : MonoBehaviour
 {
+    /// <summary>
+    /// Span falling obkets in aria based on transfrom *Could be more general*
+    /// </summary>
+
     public List<GameObject> fallingRockPrefab;
-    public int OutOfBounds = -20;
-    // Start is called before the first frame update
+
     void Start()
     {
-        InvokeRepeating("SpawnFallingRock", 1, 1);
+        InvokeRepeating(nameof(SpawnFallingRock), 1, 1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     // spawn all falling rocks from list
     void SpawnFallingRock()
     {
