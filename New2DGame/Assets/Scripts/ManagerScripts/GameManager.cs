@@ -7,6 +7,11 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// Used to manage status of player and game general.
+    /// Values that is needed thou all scenes
+    /// Funktons used in button, and other, events
+    /// </summary>
     public static GameManager Instance { get; private set; }
 
     public int world { get; private set; }
@@ -38,6 +43,7 @@ public class GameManager : MonoBehaviour
         GetCurentScene(); //update the gamanger, when entering a scene in editor
         Debug.Log("The curent Level is: " + world + "-" + stage);
     }
+
     private void OnDestroy() 
     {
         if (Instance == this)
@@ -48,12 +54,17 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        CheckCurrentScene();
+    }
+
+    void CheckCurrentScene()
+    {
         //Manual check for curent level
         if (Input.GetKeyDown(KeyCode.I))
         {
             GetCurentScene(); // updat world and stage
             Debug.Log("Current world and stage: " + world + "-" + stage);
-            
+
         }
     }
 
@@ -154,6 +165,7 @@ public class GameManager : MonoBehaviour
         LoadLevel(world, stage + 1); //Stay in curent world and load nex stage
     }
 
+    // Load next world at stage 1
     public void NextWorld()
     {
         LoadLevel(world + 1, 1);
@@ -166,10 +178,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("1-1"); // loads scean; world 1, stage 1
     }
 
+    // loads the MainMenu
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); // loads the MainMenu
+        SceneManager.LoadScene("MainMenu"); 
     }
+
+    // Load sceane based on name
     public void LoadLevelName(string levelName)
     {
         SceneManager.LoadScene(levelName);

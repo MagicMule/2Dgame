@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class SpawnFlyingEnemy : MonoBehaviour
 {
-    // this repeatedly spawn enemies at specified location
+    /// <summary>
+    /// This repeatedly spawn objekts in a Random interval
+    /// </summary>
 
     public GameObject enemyPrefab;
     private float enemyYSpawnPos;
+
+    public float startSpawning = 1.0f;
+    public float reapetSpawningRate = 1.0f;
 
     // intervel where objekt can spawn
     public float spawnPosYMax = 5f;
@@ -15,7 +20,7 @@ public class SpawnFlyingEnemy : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(EnemySpawnPos), 1, 1);
+        InvokeRepeating(nameof(EnemySpawnPos), startSpawning, reapetSpawningRate);
     }
     void EnemySpawnPos()
     {
