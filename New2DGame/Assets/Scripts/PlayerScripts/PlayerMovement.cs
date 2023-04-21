@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller2D;
     public AudioClip jumpSound;
 
-    public Animator playerJumpAnimtion; // player jump animation
+    //public Animator playerJumpAnimtion; // player jump animation
 
     private AudioSource playerAudio;
 
@@ -25,12 +25,12 @@ public class PlayerMovement : MonoBehaviour
     {
         //Calculte player horizontal movment
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
+     
         
         //player Jump, from CharaterController
         if (Input.GetButtonDown("Jump"))
         {
-            playerJumpAnimtion.SetBool("playerJump", true); // start jump animation
+            //playerJumpAnimtion.SetBool("playerJump", true); // start jump animation
             playerAudio.PlayOneShot(jumpSound, 1.0f); // play jump sound clip
             jump = true;
         }

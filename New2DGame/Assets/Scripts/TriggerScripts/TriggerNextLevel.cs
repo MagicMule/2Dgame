@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TriggerNextLevel : MonoBehaviour
 {
-    // trigger that loads next scene
+    // trigger that loads next scene, based on what bools are true
 
     public bool nextLevel;
     public bool nextWorld;
@@ -15,14 +15,15 @@ public class TriggerNextLevel : MonoBehaviour
         //load next level
         if (collision.CompareTag("Player") && nextLevel)
         {
-            Debug.Log(GameManager.Instance.world + "-" + GameManager.Instance.stage);
             GameManager.Instance.NextLevel();
         }
+
         else if (collision.CompareTag("Player") && nextWorld)
         // load level 1 of next world
         {
             GameManager.Instance.NextWorld();
         }
+
         else if(collision.CompareTag("Player") && finalLevel)
         {
             GameManager.Instance.LoadLevelName("0-0");

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class KeyPowerUp : MonoBehaviour
 {
-    // Player picks upp key
+    /*
+     * Player picks upp key.
+     * The Key is a bool value saved in GameManager.
+     * The player have a key or do not.
+    */
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

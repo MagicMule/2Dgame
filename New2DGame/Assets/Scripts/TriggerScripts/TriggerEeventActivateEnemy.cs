@@ -6,6 +6,7 @@ public class TriggerEeventActivateEnemy : MonoBehaviour
 {
     // List of enemys to be aktivated by trigger
     public List<Enemy> enemies;
+
     // When colliton with Player, activate enemyscript in enemy prefabs
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +20,5 @@ public class TriggerEeventActivateEnemy : MonoBehaviour
 
         }
         Destroy(gameObject);
-
-    } 
-
+    }
 }

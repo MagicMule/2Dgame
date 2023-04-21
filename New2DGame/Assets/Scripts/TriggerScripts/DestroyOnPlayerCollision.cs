@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyOnPlayerCollision : MonoBehaviour
 {
-    // Destroy this objekt if collision with player
+    // Destroy this objekt if collision with player 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

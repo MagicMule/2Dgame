@@ -5,12 +5,17 @@ using UnityEngine.UIElements;
 
 public class InstansiateMissile : MonoBehaviour
 {
+    /*
+     * This repeatedly instantiates an object to be used as missile
+     */
     public int missileDely = 2;
+    public int missileStart = 1;
+
     public GameObject missilePrefab;
-    // Start is called before the first frame update
+
     void Start()
     {
-        InvokeRepeating(nameof(InstansiatMissilePrefab), 1, missileDely);
+        InvokeRepeating(nameof(InstansiatMissilePrefab), missileStart, missileDely);
     }
     void InstansiatMissilePrefab()
     {

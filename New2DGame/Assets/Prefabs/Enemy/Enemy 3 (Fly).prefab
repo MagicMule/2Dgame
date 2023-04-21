@@ -193,6 +193,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 6319651854382038856}
   m_CeilingCheck: {fileID: 6319651852999615429}
   m_CrouchDisableCollider: {fileID: 0}
+  jumpAnimation: {fileID: 1653334336, guid: db1993abba5060d43a64ffb13f042830, type: 3}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []

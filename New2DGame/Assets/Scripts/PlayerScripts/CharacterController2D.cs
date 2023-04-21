@@ -12,7 +12,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
-    public Animator jumpAnimation; // Jump animation
+    [SerializeField] private Animator jumpAnimation; // Jump animation, to be active when player is not grounded 
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.

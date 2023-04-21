@@ -25287,6 +25287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player(V3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4252575669537127797, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+      propertyPath: jumpAnimation
+      value: 
+      objectReference: {fileID: 1474671681}
     - target: {fileID: 4252575669537127799, guid: db1993abba5060d43a64ffb13f042830, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -25335,8 +25339,17 @@ PrefabInstance:
       propertyPath: PlayerHealthManager
       value: 
       objectReference: {fileID: 39508979}
+    - target: {fileID: 4252575669537127803, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+      propertyPath: missileAttackReady
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+--- !u!95 &1474671681 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1653334336, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_PrefabInstance: {fileID: 1277339419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1692213941
 PrefabInstance:
   m_ObjectHideFlags: 0

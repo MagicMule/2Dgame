@@ -643,6 +643,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4252575668416153283}
   m_CeilingCheck: {fileID: 4252575670212039917}
   m_CrouchDisableCollider: {fileID: 0}
+  jumpAnimation: {fileID: 1653334336}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
