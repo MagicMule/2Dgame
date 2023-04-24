@@ -680,14 +680,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 3505508591899278362}
   attackAnimation: {fileID: 1653334336}
-  missileAttackSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
-  attackSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
-  missile: {fileID: 6223104243673238270, guid: 081fc75550a3dba4a944420b5b9f226b, type: 3}
-  missileAttackPos: {fileID: 7251740803761528052}
   swordAttackReady: 0
   swordAttackDeley: 0.5
+  swordAttackDuration: 0.2
+  attackSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
+  swordAttackSoundVolume: 1
   missileAttackReady: 0
   missileAttackDeley: 0.5
+  missileAttackDuration: 0.2
+  missileAttackSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
+  missileAttackSoundVolume: 1
+  missile: {fileID: 2881902306855046254, guid: c8ee6d379b92c214a9ccb3a2c2e5b9d4, type: 3}
+  missileAttackPos: {fileID: 7251740803761528052}
 --- !u!114 &4252575669537127800
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -103,6 +103,7 @@ MonoBehaviour:
   rotationSpeedZ: 400
   renderer: {fileID: 5954931755587307330}
   cangeColorFrequency: 0.1
+  cangeCollorRandom: 1
 --- !u!61 &5954931755587307332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5954931757232105724}
-  - component: {fileID: 5954931757232105727}
+  - component: {fileID: 2906747212508434710}
   m_Layer: 0
   m_Name: BossProjektileCenterLeft
   m_TagString: Missile
@@ -162,7 +163,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &5954931757232105727
+--- !u!114 &2906747212508434710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5954931757232105725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d04bb951a14c6f4d88c3adee63fdd07, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fa6b3706ec83e446ac7f805bd83fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 1
+  forwardSpeed: -2

@@ -19,6 +19,6 @@ public class MoveForward : MonoBehaviour
     // move objekt on the x axes 
     void Update()
     {
-        transform.Translate(transform.up * forwardSpeed * Time.deltaTime, Space.World);
+        transform.Translate( new Vector2(forwardSpeed, 0) * Time.deltaTime);
     }
 }

@@ -1476,6 +1476,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 6892606246992451803}
   m_CeilingCheck: {fileID: 6892606245564353269}
   m_CrouchDisableCollider: {fileID: 0}
+  jumpAnimation: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1495,7 +1496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller2D: {fileID: 6892606245972157293}
+  jumpSound: {fileID: 0}
   runSpeed: 50
+  horizontalMove: 0
 --- !u!114 &6892606245972157283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,12 +1512,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 6054327373070459394}
-  missile: {fileID: 6223104243673238270, guid: 081fc75550a3dba4a944420b5b9f226b, type: 3}
-  missileAttackPos: {fileID: 329040620}
+  attackAnimation: {fileID: 0}
   swordAttackReady: 0
   swordAttackDeley: 0.5
+  swordAttackDuration: 0.2
+  attackSound: {fileID: 0}
+  swordAttackSoundVolume: 1
   missileAttackReady: 1
   missileAttackDeley: 0.5
+  missileAttackDuration: 0.2
+  missileAttackSound: {fileID: 0}
+  missileAttackSoundVolume: 1
+  missile: {fileID: 2881902306855046254, guid: c8ee6d379b92c214a9ccb3a2c2e5b9d4, type: 3}
+  missileAttackPos: {fileID: 329040620}
 --- !u!114 &6892606245972157280
 MonoBehaviour:
   m_ObjectHideFlags: 0
