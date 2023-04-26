@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    // Simple move forward script
+    // Simple move forward script, based on space self
 
     private Rigidbody2D rB;
 
@@ -19,6 +19,6 @@ public class MoveForward : MonoBehaviour
     // move objekt on the x axes 
     void Update()
     {
-        transform.Translate( new Vector2(forwardSpeed, 0) * Time.deltaTime);
+        transform.Translate( new Vector2(0, forwardSpeed) * Time.deltaTime, Space.Self);
     }
 }
