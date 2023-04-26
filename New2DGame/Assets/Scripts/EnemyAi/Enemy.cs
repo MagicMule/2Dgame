@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     private Vector3 moveToPlayer;
 
     public bool isShoter = false; // if enemy is to shot
-    public bool enemyStop = false; // if enemy is to stop at distace
     public bool enemyMoveTo = true; // if enemy is to move to player
 
     private float playerEnemyXDistance;
@@ -44,7 +43,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-    //When enemy hit by sword
     public void OnTriggerEnter2D(Collider2D collision)
     {
         {
@@ -64,20 +62,14 @@ public class Enemy : MonoBehaviour
             //Disdance form player and enemy on the X axes
             playerEnemyXDistance = Mathf.Abs(player.transform.position.x - gameObject.transform.position.x);
 
-            //Cheking distance and enemyStop bool
-            if (playerEnemyXDistance < playerEnemyXDistanceMax && enemyStop)
-            {
-                //Stop
-            }
-            else
-            {
-                moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
-                transform.Translate(Time.deltaTime * moveToPlayer);
-            }
+            moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
+            transform.Translate(Time.deltaTime * moveToPlayer);
         }
 
 
     }
+
+
     //cheks if enemy is to shot missile
     void EnemyMissileAttack()
     {
