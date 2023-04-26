@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    /// <summary>
+    /// The Base clase for all enemy objekts
+    /// </summary>
     private Rigidbody2D enemyRb;
     private GameObject player;
 
@@ -12,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     public AudioClip enemyGetHitByPlayerSound;
 
-    public float pushDistanse = 10f;
+    public float pushDistanse = 10f; 
     public int enemyHealth = 10;
     public float enemySpeed = 5;
 
@@ -44,29 +47,12 @@ public class Enemy : MonoBehaviour
     //When enemy hit by sword
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        // Players sword colliton with enemy
-        if (collision.gameObject.CompareTag("Sword") || collision.gameObject.CompareTag("PlayerMissile"))
         {
-            playerAudio.PlayOneShot(enemyGetHitByPlayerSound, 1.0f); //play when enemy is hit
+            // When enemy is hit with a player attack
+            EnemyHitByPlayerAttack(collision);
 
-            Debug.Log(collision.gameObject.name + " hit " + gameObject.name);
-            enemyHealth -= 1;
-
-            // Push enemy up and away from attack
-            enemyRb.AddForce(new Vector2((gameObject.transform.position.x - player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
-
-            if (collision.gameObject.CompareTag("PlayerMissile")) // if hit by missile, destriy missile
-            {
-                Destroy(collision.gameObject);
-            }
-
-            // Destroy enemy if no more health
-            if (enemyHealth <= 0)
-            {
-
-                Debug.Log("Enemy destroyed: " + gameObject.name);
-                Destroy(gameObject);
-            }
+            // When enemy hp 0 
+            DestroyEnemy(); 
         }
     }
 
@@ -98,6 +84,36 @@ public class Enemy : MonoBehaviour
         if (isShoter)
         {
             GetComponentInChildren<InstansiateMissile>().enabled = true;
+        }
+    }
+
+    void EnemyHitByPlayerAttack(Collider2D collider)
+    {
+        // Players sword colliton with enemy
+        if (collider.gameObject.CompareTag("Sword") || collider.gameObject.CompareTag("PlayerMissile"))
+        {
+            playerAudio.PlayOneShot(enemyGetHitByPlayerSound, 1.0f); //play when enemy is hit
+
+            Debug.Log(collider.gameObject.name + " hit " + gameObject.name);
+            enemyHealth -= 1;
+
+            // Push enemy up and away from attack
+            enemyRb.AddForce(new Vector2((gameObject.transform.position.x - player.transform.position.x), 1).normalized * pushDistanse, ForceMode2D.Impulse);
+
+            if (collider.gameObject.CompareTag("PlayerMissile")) // if hit by missile, destriy missile
+            {
+                Destroy(collider.gameObject);
+            }
+        }
+    }
+
+    void DestroyEnemy()
+    {
+        // Destroy enemy if no more health
+        if (enemyHealth <= 0)
+        {
+            Debug.Log("Enemy destroyed: " + gameObject.name);
+            Destroy(gameObject);
         }
     }
 
