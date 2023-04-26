@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 3 (Archer)
       objectReference: {fileID: 0}
+    - target: {fileID: 1791345686679201055, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2e47a00b7ebc844a9e49b3b5423a084, type: 3}
 --- !u!1001 &401521061

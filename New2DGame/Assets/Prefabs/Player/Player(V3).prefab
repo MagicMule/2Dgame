@@ -682,10 +682,10 @@ MonoBehaviour:
   attackAnimation: {fileID: 1653334336}
   swordAttackReady: 0
   swordAttackDeley: 0.5
-  swordAttackDuration: 0.2
+  swordAttackDuration: 0.05
   attackSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
   swordAttackSoundVolume: 1
-  missileAttackReady: 0
+  missileAttackReady: 1
   missileAttackDeley: 0.5
   missileAttackDuration: 0.2
   missileAttackSound: {fileID: 8300000, guid: 113ee460fadc340e4957a7404a9fbb27, type: 3}
@@ -998,6 +998,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4252575669537127799}
     m_Modifications:
+    - target: {fileID: 838301165362824627, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 838301165362824627, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 838301165362824636, guid: c712c2f85b480c143a2e1d4dd4fe0d13, type: 3}
       propertyPath: m_Color.g
       value: 0.92931914

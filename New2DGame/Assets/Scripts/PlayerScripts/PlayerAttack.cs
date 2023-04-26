@@ -59,27 +59,30 @@ public class PlayerAttack : MonoBehaviour
             attackAnimation.SetBool("swordAttack", true); // Enter the sword attack animation
 
             sword.SetActive(true); // Activate the sword gameobjekt
-            StartCoroutine(SwordAttack());
+            StartCoroutine(SwordAttack()); //Start the sword attack deley
         }
     }
 
-    //This instasate the sword for 0.2 sec and then starts SwordDeley
+    //Time sword objekt is active
     IEnumerator SwordAttack()
     {
-        swordAttackReady = false; 
+        swordAttackReady = false; // Player can not make onother sword attack atm
 
         yield return new WaitForSeconds(swordAttackDuration); // Time sword objekt is active
 
-        sword.SetActive(false);
-        StartCoroutine(SwordDely());
+        sword.SetActive(false); // Turn of the sword hitbox
+
         attackAnimation.SetBool("swordAttack", false); // Exsit the sword attack animation
+
+        StartCoroutine(SwordDely()); // Start Sword attack delay countdown
+        
     }
 
     //delay befor player can make new attack
     IEnumerator SwordDely()
     {
         yield return new WaitForSeconds(swordAttackDeley); // Time befor player can make another sword attack
-        swordAttackReady = true;
+        swordAttackReady = true; // Player can now make onother attack
     }
 
 

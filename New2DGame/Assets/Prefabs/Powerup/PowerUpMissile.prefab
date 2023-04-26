@@ -104,6 +104,7 @@ MonoBehaviour:
   rotationSpeedZ: 200
   renderer: {fileID: 1905591057275532961}
   cangeColorFrequency: 30
+  cangeCollorRandom: 1
 --- !u!61 &1905591057275532967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,4 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12909ab9b36ab8547a236e07d1dcd32d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAttack: {fileID: 0}
+  playerAudioSource: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  pickUpSund: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
+  pickUpSundVolume: 1
+  playerAttack: {fileID: 4252575669537127803, guid: db1993abba5060d43a64ffb13f042830, type: 3}
