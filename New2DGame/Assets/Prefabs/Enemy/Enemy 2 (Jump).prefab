@@ -186,8 +186,8 @@ GameObject:
   - component: {fileID: 6834521264046988826}
   - component: {fileID: 6834521264046988827}
   - component: {fileID: 6834521264046988828}
-  - component: {fileID: 6834521264046988829}
   - component: {fileID: 6834521264046988807}
+  - component: {fileID: 2606835408049951400}
   - component: {fileID: -3892463138070331466}
   m_Layer: 0
   m_Name: Enemy 2 (Jump)
@@ -342,27 +342,6 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6834521264046988829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6834521264046988830}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7858e6c474eea7b49909ce71fb207b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
-  enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
-  pushDistanse: 5
-  enemyHealth: 3
-  enemySpeed: 5
-  isShoter: 0
-  enemyStop: 0
-  enemyMoveTo: 1
-  playerEnemyXDistanceMax: 3
 --- !u!114 &6834521264046988807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +355,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 10
+--- !u!114 &2606835408049951400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6834521264046988830}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f760571554a8f44a9f9659131862fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  pushDistanse: 10
+  enemyHealth: 10
+  enemySpeed: 5
+  isShoter: 0
+  enemyMoveTo: 1
+  playerEnemyXDistanceMax: 3
 --- !u!82 &-3892463138070331466
 AudioSource:
   m_ObjectHideFlags: 0

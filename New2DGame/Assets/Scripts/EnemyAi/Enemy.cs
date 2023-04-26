@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour
     public bool enemyMoveTo = true; // if enemy is to move to player
 
     private float playerEnemyXDistance;
-    public float playerEnemyXDistanceMax = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -65,8 +64,6 @@ public class Enemy : MonoBehaviour
             moveToPlayer = new Vector2(player.transform.position.x - gameObject.transform.position.x, 0).normalized;  //Vector to the player x position
             transform.Translate(Time.deltaTime * moveToPlayer);
         }
-
-
     }
 
 

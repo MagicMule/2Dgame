@@ -12,26 +12,30 @@ public class PlayerTakeDamge : MonoBehaviour
     public Rigidbody2D playerRB;
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        // Diration player is shoved wwhen hitt
-        Vector2 awayFromEnemyPushBack = new Vector2(transform.position.x - collision.transform.position.x, transform.position.y - transform.position.y).normalized;
+        PlayerHitByEnemy(collision);
+    }
+    void PlayerHitByEnemy(Collision2D collider)
+    {
+        // Diration player is shoved when hitt
+        Vector2 awayFromEnemyPushBack = new Vector2(transform.position.x - collider.transform.position.x, transform.position.y - transform.position.y).normalized;
 
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Missile"))
+        if (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("Missile"))
         {
             //Uppdate of UI when player hit
             PlayerHealthManager.UpdatePlayerHPUI();
 
             //Push back player
-            playerRB.AddForce(awayFromEnemyPushBack * playerPushBackMagnitude ,ForceMode2D.Impulse);
+            playerRB.AddForce(awayFromEnemyPushBack * playerPushBackMagnitude, ForceMode2D.Impulse);
 
-            Debug.Log(gameObject.name + " hit by " + collision.gameObject.name);
+            Debug.Log(gameObject.name + " hit by " + collider.gameObject.name);
 
-            if (collision.gameObject.CompareTag("Missile")) // if hit by missile, destroy missile
+            if (collider.gameObject.CompareTag("Missile")) // if hit by missile, destroy missile
             {
-                Destroy(collision.gameObject);
+                Destroy(collider.gameObject);
             }
 
-        }             
+        }
     }
 }

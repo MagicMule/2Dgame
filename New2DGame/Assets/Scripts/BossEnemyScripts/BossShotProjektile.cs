@@ -14,12 +14,6 @@ public class BossShotProjektile : MonoBehaviour
         InvokeRepeating("InstansiateBossAttack", 1, fireRate);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //Instasate the prefab
     void InstansiateBossAttack()
     {
@@ -50,7 +44,6 @@ public class BossShotProjektile : MonoBehaviour
         {
             vectorSpawn = new Vector3(transform.position.x - 1, transform.position.y + AttackHight, transform.position.z);
         }
-
 
         return vectorSpawn;
     }
