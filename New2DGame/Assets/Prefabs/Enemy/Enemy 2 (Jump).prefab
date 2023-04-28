@@ -203,7 +203,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6834521264046988830}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.17, y: -0.8709891, z: -0.2866381}
   m_LocalScale: {x: 0.25, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 6834521263083144709}
   m_CeilingCheck: {fileID: 6834521262584561330}
   m_CrouchDisableCollider: {fileID: 0}
-  jumpAnimation: {fileID: 1653334336, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -370,11 +370,10 @@ MonoBehaviour:
   playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
   enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   pushDistanse: 10
-  enemyHealth: 10
-  enemySpeed: 5
+  enemyHealth: 1
+  enemySpeed: 3
   isShoter: 0
   enemyMoveTo: 1
-  playerEnemyXDistanceMax: 3
 --- !u!82 &-3892463138070331466
 AudioSource:
   m_ObjectHideFlags: 0

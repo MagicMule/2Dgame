@@ -272,7 +272,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 8268765281840071355}
   m_CeilingCheck: {fileID: 8268765281612144182}
   m_CrouchDisableCollider: {fileID: 0}
-  jumpAnimation: {fileID: 0}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -387,14 +387,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bbde7921e25e14f85acb9b61682113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAudio: {fileID: 0}
+  playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
   enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   pushDistanse: 10
-  enemyHealth: 10
+  enemyHealth: 1
   enemySpeed: 2
   isShoter: 0
   enemyMoveTo: 1
-  playerEnemyXDistanceMax: 3
 --- !u!1 &8268765281612144183
 GameObject:
   m_ObjectHideFlags: 0

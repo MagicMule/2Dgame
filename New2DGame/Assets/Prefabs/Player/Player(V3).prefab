@@ -489,12 +489,12 @@ GameObject:
   - component: {fileID: 4252575669537127798}
   - component: {fileID: 4252575669537127802}
   - component: {fileID: 4252575669537127792}
-  - component: {fileID: 4252575669537127797}
   - component: {fileID: 4252575669537127796}
   - component: {fileID: 4252575669537127803}
   - component: {fileID: 4252575669537127800}
   - component: {fileID: 1653334336}
   - component: {fileID: 1935914238}
+  - component: {fileID: 1380591741}
   m_Layer: 10
   m_Name: Player(V3)
   m_TagString: Player
@@ -621,35 +621,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.28, y: 2.23}
   m_EdgeRadius: 0
---- !u!114 &4252575669537127797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4252575669537127795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2ae5961e97f2044890225799af82869, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2147483647
-  m_GroundCheck: {fileID: 4252575668416153283}
-  m_CeilingCheck: {fileID: 4252575670212039917}
-  m_CrouchDisableCollider: {fileID: 0}
-  jumpAnimation: {fileID: 1653334336}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4252575669537127796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909a4d354f0537744b0dbc9b33dd0fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller2D: {fileID: 4252575669537127797}
+  controller2D: {fileID: 1380591741}
   jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   runSpeed: 50
   horizontalMove: 0
@@ -681,7 +652,7 @@ MonoBehaviour:
   sword: {fileID: 3505508591899278362}
   attackAnimation: {fileID: 1653334336}
   swordAttackReady: 0
-  swordAttackDeley: 0.5
+  swordAttackDeley: 0.1
   swordAttackDuration: 0.05
   attackSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
   swordAttackSoundVolume: 1
@@ -823,6 +794,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1380591741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252575669537127795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d254687a17414ed4cbc36adb7449b446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 400
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  m_GroundCheck: {fileID: 4252575668416153283}
+  m_CeilingCheck: {fileID: 4252575670212039917}
+  m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  jumpAnimation: {fileID: 1653334336}
 --- !u!1 &4252575670212039916
 GameObject:
   m_ObjectHideFlags: 0

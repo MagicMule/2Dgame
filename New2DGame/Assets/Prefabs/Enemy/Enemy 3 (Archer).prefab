@@ -155,9 +155,9 @@ GameObject:
   - component: {fileID: 1791345686679201055}
   - component: {fileID: 1791345686679201054}
   - component: {fileID: 1791345686679201053}
-  - component: {fileID: 1791345686679201042}
   - component: {fileID: 5724016344979764458}
   - component: {fileID: -1619605181158145369}
+  - component: {fileID: 181091742}
   m_Layer: 0
   m_Name: Enemy 3 (Archer)
   m_TagString: Enemy
@@ -304,34 +304,13 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1791345687278204470}
   m_CeilingCheck: {fileID: 1791345686044682939}
   m_CrouchDisableCollider: {fileID: 0}
-  jumpAnimation: {fileID: 1653334336, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1791345686679201042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791345686679201050}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7858e6c474eea7b49909ce71fb207b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
-  enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
-  pushDistanse: 5
-  enemyHealth: 2
-  enemySpeed: 5
-  isShoter: 1
-  enemyStop: 0
-  enemyMoveTo: 0
-  playerEnemyXDistanceMax: 1000
 --- !u!114 &5724016344979764458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +422,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &181091742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791345686679201050}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ef3acda10fc9d438741a4243a18698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 1935914238, guid: db1993abba5060d43a64ffb13f042830, type: 3}
+  enemyGetHitByPlayerSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  pushDistanse: 10
+  enemyHealth: 1
+  enemySpeed: 5
+  isShoter: 1
+  enemyMoveTo: 0
 --- !u!1 &1791345687278204469
 GameObject:
   m_ObjectHideFlags: 0
