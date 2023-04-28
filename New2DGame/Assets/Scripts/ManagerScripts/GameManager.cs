@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        GetCurentScene();
         //This component gameobjekt to instansiate thoru all sceans
         if (Instance != null)
         {
@@ -141,11 +140,13 @@ public class GameManager : MonoBehaviour
         LoadLevelName("IntroText");
     }
 
+
     public void GameOver()
     {
         //NewGame(); // Cange to a new game
         LoadLevel(world, stage); // restart/load curent level
     }
+
 
     // Loding difrent scenes based on world and stage
     public void LoadLevel(int world, int stage)
