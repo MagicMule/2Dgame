@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     /// <summary>
-    /// The Base clase for all enemy objekts
+    /// The Base class for all enemy objekts
     /// </summary>
     private Rigidbody2D enemyRb;
     private GameObject player;
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     private Vector3 moveToPlayer;
 
+    public bool isBoss = false;
     public bool isShoter = false; // if enemy is to shot
     public bool enemyMoveTo = true; // if enemy is to move to player
 
@@ -102,7 +104,16 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Debug.Log("Enemy destroyed: " + gameObject.name);
+            WinGameIfBossDefeted();
             Destroy(gameObject);
+        }
+    }
+
+    void WinGameIfBossDefeted()
+    {
+        if(isBoss)
+        {
+            SceneManager.LoadScene("VictoryText");
         }
     }
 
