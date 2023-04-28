@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-
+        GetCurentScene();
         //This component gameobjekt to instansiate thoru all sceans
         if (Instance != null)
         {
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         CheckCurrentScene();
+        //GetCurentScene(); // Har fix to keep the level and stage up to date
     }
 
     void CheckCurrentScene()

@@ -9,6 +9,7 @@ public class TriggerDEathZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameManager.Instance.GetCurentScene();
             GameManager.Instance.GameOver();
         }
 
