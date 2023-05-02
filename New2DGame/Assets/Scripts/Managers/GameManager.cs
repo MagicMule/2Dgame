@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int stage { get; private set; }
     public int lives { get; private set; }
     public int cherry { get; private set; }
+    public int Health { get; private set; }
 
     public GameObject gameOverUI;
     public float resetDelay = 2f;
