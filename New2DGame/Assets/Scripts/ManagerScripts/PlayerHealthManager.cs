@@ -30,7 +30,7 @@ public class PlayerHealthManager : MonoBehaviour
         if (playerHP <= 0)
         {
             Debug.Log("Game Over!");
-
+            GameManager.Instance.GetCurentScene();
             GameManager.Instance.GameOver();
         }
     }

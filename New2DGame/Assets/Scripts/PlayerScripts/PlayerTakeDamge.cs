@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerTakeDamge : MonoBehaviour
 {
-    //
+    /// <summary>
+    /// Handle Player damge and knoclback
+    /// </summary>
     public int playerPushBackMagnitude = 40;
 
     public PlayerHealthManager PlayerHealthManager;
