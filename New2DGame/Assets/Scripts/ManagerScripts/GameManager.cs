@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     /// Values that is needed thou all scenes
     /// Funktons used in button, and other, events
     /// </summary>
+    /// 
+    // ENCAPSULATION: Here are valuse used in many scripts and can be canged only by instance of GameManager
     public static GameManager Instance { get; private set; }
 
     public int world { get; private set; }

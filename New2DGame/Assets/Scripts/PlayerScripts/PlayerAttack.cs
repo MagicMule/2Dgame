@@ -15,6 +15,10 @@ public class PlayerAttack : MonoBehaviour
 
     private AudioSource playerAoudio;
 
+    /// <summary>
+    /// Below values of the attacks can be altered
+    /// </summary>
+
     //Sword
     public bool swordAttackReady = true;
     public float swordAttackDeley = 0.5f;
@@ -39,10 +43,11 @@ public class PlayerAttack : MonoBehaviour
         swordAttackReady = true;
     }
 
+    // ABSTRACTION
     void Update()
     {
-        UseSwordAttack();
-        ShotMissile();
+        UseSwordAttack(); // K to attack with sword
+        ShotMissile(); // L to attack with missile
     }
 
 

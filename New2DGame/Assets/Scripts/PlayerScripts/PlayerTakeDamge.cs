@@ -38,6 +38,7 @@ public class PlayerTakeDamge : MonoBehaviour
                 Destroy(collider.gameObject);
             }
 
+
         }
     }
 }
