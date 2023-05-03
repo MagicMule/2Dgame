@@ -164,6 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd286571014facd4ba4b8a0aa2b31d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerAudio: {fileID: 0}
+  projektileDestroySound: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
+  destroySoundVolume: 1
 --- !u!82 &5122801321915581812
 AudioSource:
   m_ObjectHideFlags: 0
